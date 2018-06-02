@@ -1,32 +1,33 @@
-$transition-type: .2s ease;
-
 .footer {
-    padding: 25px 0;
-    background: $ui-grey-dark;
-    font: 14px $Helvetica;
+    padding: 20px 0;
+    background: $ui-white;
+    font: 18px $Helvetica;
+
+    @include tablet {
+        font-size: 14px;
+    }
 
     @include mobile {
-        padding: 30px 0;
+        padding: 20px 0;
+        font-size: 14px;
+    }
+}
+
+.footer-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        position: relative;
     }
 
-    &__bar {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        align-items: center;
-
-        @include tablet {
-            margin: 20px 20px 0;
-            position: relative;
-        }
-
-        @include mobile {
-            flex-direction: column;
-        }
+    @include mobile {
+        flex-direction: column;
     }
-
+    
     &__copyright {
-        color: #fff;
+        color: #000;
         line-height: 1;
 
         @include mobile {
@@ -34,93 +35,19 @@ $transition-type: .2s ease;
         }
     }
 
-    &__socials {
+    &__column:not(:last-child) {
+        
+        @include not-mobile {
+            padding-right: 15px;
+        
+            &::after {
+                content: '|';
+                margin-left: 15px; 
+            }
+        }
 
         @include mobile {
-            box-sizing: border-box;
-            width: 100%;
-            border-bottom: 2px solid rgba($ui-grey-text-dark, .5);
-            padding: 10px 15px 0;
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
-    }
-
-    $vk: #4d75a3;
-    $ok: #fff;
-    $twitter: #03a9f4;
-    $fb: #3f51b5;
-    $gplus: #ff3d00;
-    $mailru: #168be8;
-
-    &__social-link {
-        display: inline-block;
-        vertical-align: top;
-        margin: 0 8px;
-        background: transparent no-repeat center;
-        border-radius: 3px;
-
-        @include mobile {
-            margin: 0 15px 30px;
-        }
-
-        &--vk:hover {
-            background-color: $vk;
-        }
-
-        &--ok:hover {
-            background-color: $ok;
-
-            .footer__social-image {
-                fill: #ec8500;
-            }
-        }
-
-        &--twitter:hover {
-            background-color: $twitter;
-        }
-
-        &--fb:hover {
-            background-color: $fb;
-        }
-
-        &--gplus:hover {
-            background-color: $gplus;
-        }
-
-        &--mailru:hover {
-            background-color: $mailru;
-
-            .footer__social-image {
-                fill: #feab00;
-            }
-        }
-
-        &--insta:hover {
-            background-color: $mailru;
-
-            .footer__social-image {
-                stroke: #fff;
-            }
-
-            .footer__social-image--fill {
-                fill: #fff;
-            }
-        }
-
-        &--insta:hover {
-            background-image: url('/img/social_insta_hover.png');
-        }
-
-        &:hover {
-            .footer__social-image {
-                opacity: 1;
-            }
-        }
-    }
-
-    &__social-image {
-        transition: opacity $transition-type, fill $transition-type, stroke $transition-type;
     }
 }
