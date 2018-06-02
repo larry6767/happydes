@@ -1,0 +1,14 @@
+.ui-container {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 748px;
+    }
+
+    @include mobile {
+        width: 100%;
+        min-width: 320px;
+    }
+}

@@ -1,0 +1,40 @@
+@import "./ui-colors";
+@import "./ui-fonts";
+
+.ui-select {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 5px 10px;
+    border: 1px solid $ui-grey;
+    border-radius: 4px;
+    background: #fff;
+    font: 14px $Helvetica;
+
+    &:focus {
+        border-color: $ui-blue-focus;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &--m {
+        height: 36px;
+    }
+
+    &--s {
+        height: 28px;
+    }
+
+    &--arrow-down {
+        appearance: none;
+        padding-right: 30px;
+        background: #fff url('/img/arrow_down_black.svg') no-repeat 95% 57%;
+    }
+
+    &--arrow-down-filled {
+        appearance: none;
+        padding-right: 30px;
+        background: #fff url('/img/arrow_down_filled_black.svg') no-repeat 80% 53%;
+    }
+}

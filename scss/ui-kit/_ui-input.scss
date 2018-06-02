@@ -1,0 +1,24 @@
+@import "./ui-colors";
+@import "./ui-fonts";
+
+.ui-input {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 5px 10px;
+    border: 1px solid $ui-grey;
+    border-radius: 4px;
+    background: #fff;
+    font: 14px $Helvetica;
+
+    &:focus {
+        border-color: $ui-blue-focus;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &--m {
+        height: 36px;
+    }
+}
