@@ -1,0 +1,10 @@
+.contact-form-block {
+	background: $ui-gradient;
+	padding: 100px;
+}
+
+&__inner {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	}
