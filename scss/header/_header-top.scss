@@ -1,0 +1,91 @@
+.header-top {
+    font: 700 16px $Comfortaa;
+    color: $ui-dark-violet;
+    letter-spacing: 3px;
+
+    @include tablet {
+        font: 700 12px $Comfortaa;
+    }
+
+    @include mobile {
+        font: 700 12px $Comfortaa;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $ui-gradient;
+    }
+
+    &__wrapper {
+
+        display: flex;
+        padding: 15px 0 15px;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+            padding: 10px 0 10px;
+        }  
+
+        @include mobile {
+            flex-direction: column;
+            padding: 10px 0 10px;
+        }
+    }
+
+    &__social-icons {
+        display: flex;
+        width: 120px;
+        justify-content: space-between;
+
+        @include tablet {
+            width: 110px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $ui-gradient;
+
+        &--twitter {
+
+            &::after {
+                content: url(/img/twitter.svg);
+                display: block;
+                width: 24,6px;
+                hight: auto;
+            }
+        }
+    }
+
+    &__contact {
+        width: 260px;
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+
+        &--phone {
+            justify-content: flex-end;
+
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+    }   
+}
