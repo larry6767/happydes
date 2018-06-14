@@ -7,9 +7,8 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    height: 36px;
-    padding: 0 10px;
-    border-radius: 4px;
+    padding: 2px;
+    border-radius: 22px;
     font: 14px/20px $Helvetica;
     cursor: pointer;
     user-select: none;
@@ -18,7 +17,13 @@
     border: none;
     text-decoration: none;
     transition: background 0.2s ease-out;
-    //color: $ui-dark-violet;
+    color: $ui-dark-violet;
+
+    &::before {
+        content: attr(data-text);
+        border-radius: 22px;
+        padding: 10px 23px;
+    }
 
     &:hover {
         text-decoration: none;
@@ -42,234 +47,27 @@
         font: 18px $Helvetica;
     }
 
-    &--transparent {
-        //color: $ui-link;
-        background: transparent;
-        border: 1px solid #b9c5dd;
-    }
-    
-    &--blue {
-        //background: $ui-blue-gradient;
-        color: #fff;
+    &--gradient {
+        background: $ui-gradient;
 
-        &:hover {
-            //background: $ui-blue-gradient-hover;
+        &::before {
+            background: $ui-white;
         }
-    }
 
-    &--blue.ui-button--disabled,
-    &--blue.ui-button--disabled:hover,
-    &--blue:disabled,
-    &--blue:disabled:hover {
-        //background: $ui-blue-gradient-disabled;
-    }
-
-    &--blue-light {
-        background: linear-gradient(#66B2E5, #438FC4);
-        color: #fff;
-
-        &:hover {
-            //background: $ui-blue-gradient-hover;
+        &:hover::before {
+            background: $ui-gradient;
         }
-    }
-
-    &--red {
-        background: linear-gradient(#BD2727, #A11C1C);
-        color: #fff;
-
-        &:hover {
-            background: linear-gradient(#DB3636, #B21B1B);
-        }
-    }
-
-    &--grey {
-        //background: $ui-grey-gradient;
-        //color: $ui-dark-violet;
-
-        &:hover {
-            //background: $ui-grey-gradient-hover;
-        }
-    }
-
-    &--grey-blue {
-        background: #D6DCE4;
-        //color: $ui-dark-violet;
     }
 
     &--white {
-        background: #fff;
-        //color: $ui-grey-text-2;
-    }
-
-    &--green-line {
-        background: none;
-        //border: 1px solid $ui-green;
-        //color: $ui-green;
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-    }
-
-    &--back {
-        justify-content: flex-start;
+        background: $ui-white;
 
         &::before {
-            display: flex;
-            width: 8px;
-            height: 13px;
-            margin-right: 6px;
-            content: url("/img/arrow_left.svg");
-        }
-    }
-
-    &--back-arrow {
-        
-        &::before {
-            content: url('/img/left-arrow.svg');
-            display: inline-block;
-            width: 17px;
-            height: 9px;
-            margin-right: 8px;
-        }
-    }
-
-    &--green {
-        //background: $ui-green-gradient;
-        color: #fff;
-
-        &:hover {
-            color: #fff;
-            background: linear-gradient(#24CD5C, #02A152);
-        }
-    }
-
-    &--green.ui-button--disabled,
-    &--green.ui-button--disabled:hover,
-    &--green:disabled,
-    &--green:disabled:hover {
-        background: linear-gradient(#D6E4D7, #C7D9C8);
-        //color: $ui-grey-text;
-    }
-
-    &--arrow-down {
-        
-        &::after {
-            position: absolute;
-            right: 16px;
-            top: 14px;
-            width: 12px;
-            height: 12px;
-            content: url("/img/arrow_down.svg");
-        }
-    }
-
-    &--basket {
-        justify-content: flex-start;
-
-        &::before {
-            display: flex;
-            width: 20px;
-            height: 17px;
-            margin-left: 1px;
-            margin-right: 14px;
-            content: url("/img/basket.svg");
-        }
-    }
-
-    &--basket.ui-button--counter {
-        &::before {
-            margin-right: 6px;
-        }
-    }
-
-    &--orders {
-        justify-content: flex-start;
-
-        &::before {
-            display: flex;
-            width: 13px;
-            height: 16px;
-            margin-left: 4px;
-            margin-right: 19px;
-            content: url("/img/orders.svg");
-        }
-    }
-
-    &--orders.ui-button--counter {
-        &::before {
-            margin-right: 11px;
-
-            @include not-desktop {
-                margin: auto;
-            }
-        }
-    }
-
-    &--garage {
-        justify-content: flex-start;
-
-        &::before {
-            display: flex;
-            width: 28px;
-            height: 15px;
-            margin-left: 2px;
-            margin-right: 9px;
-            content: url("/img/garage.svg");
-
-            @include tablet {
-                margin-left: 5px;
-                margin-right: 0;
-            }
+            background: $ui-gradient;
         }
 
-        &::after {
-            display: flex;
-            width: 10px;
-            height: 6px;
-            margin-left: 10px;
-            margin-right: 6px;
-            content: url("/img/triangle_down.svg");
-
-            @include tablet {
-                margin-left: 9px;
-            }
-        }
-    }
-
-    &--yellow {
-        color: #000;
-        background: linear-gradient(#FFE35D, #FAB512);
-
-        &:hover {
-            color: #000;
-            background: linear-gradient(#FFD96F, #FFCD42);
-        }
-    }
-
-    &--dis {
-        background: #596571;
-        box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.5);
-    }
-
-    &--disabled,
-    &:disabled {
-        cursor: not-allowed;
-        pointer-events: none;
-    }
-
-    &__counter {
-        position: absolute;
-        right: 10px;
-
-        @include not-desktop {
-            font-size: 10px;
-            line-height: 10px;
-            padding: 5px 6px;
-            top: -8px;
-            right: -5px;
-            background: #e02f26;
-            border-radius: 50%;
+        &:hover::before {
+            background: $ui-white;
         }
     }
 }

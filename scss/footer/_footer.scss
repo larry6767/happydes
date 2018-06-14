@@ -1,5 +1,3 @@
-$transition-type: .2s ease;
-
 .footer {
     padding: 25px 0;
     //background: $ui-grey-dark;
@@ -118,9 +116,5 @@ $transition-type: .2s ease;
                 opacity: 1;
             }
         }
-    }
-
-    &__social-image {
-        transition: opacity $transition-type, fill $transition-type, stroke $transition-type;
     }
 }

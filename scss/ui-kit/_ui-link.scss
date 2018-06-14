@@ -6,7 +6,7 @@ a:not(.ui-button):active,
 .ui-link:focus,
 .ui-link:visited,
 .ui-link:active {
-    //color: $ui-link;
+    color: $ui-dark-violet;
     text-decoration: underline;
     cursor: pointer;
 
@@ -31,7 +31,7 @@ a:not(.ui-button):active,
     }
 
     &.ui-link--disabled {
-        //color: $ui-dark-violet;
+        color: $ui-grey;
         cursor: not-allowed;
         text-decoration: none;
 
@@ -73,88 +73,88 @@ a:not(.ui-button):active,
         }
     }
 
-    &.ui-link--export,
-    &.ui-link--download,
-    &.ui-link--help,
-    &.ui-link--print,
-    &.ui-link--view,
-    &.ui-link--delete,
-    &.ui-link--sort-by-increase,
-    &.ui-link--sort-by-decrease,
-    &.ui-link--lightning {
-        display: flex;
-        align-items: center;
-        &::before {
-            flex-shrink: 0;
-            content: '';
-            background-image: url("/img/exel.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100%;
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            margin: 0 8px 0 0;
-        }
-    }
+    // &.ui-link--export,
+    // &.ui-link--download,
+    // &.ui-link--help,
+    // &.ui-link--print,
+    // &.ui-link--view,
+    // &.ui-link--delete,
+    // &.ui-link--sort-by-increase,
+    // &.ui-link--sort-by-decrease,
+    // &.ui-link--lightning {
+    //     display: flex;
+    //     align-items: center;
+    //     &::before {
+    //         flex-shrink: 0;
+    //         content: '';
+    //         background-image: url("/img/exel.svg");
+    //         background-repeat: no-repeat;
+    //         background-position: center;
+    //         background-size: 100%;
+    //         display: inline-block;
+    //         width: 18px;
+    //         height: 18px;
+    //         margin: 0 8px 0 0;
+    //     }
+    // }
 
-    &.ui-link--download {
-        &::before {
-            background-image: url("/img/download.svg");
-            background-size: 90%;
-        }
-    }
+    // &.ui-link--download {
+    //     &::before {
+    //         background-image: url("/img/download.svg");
+    //         background-size: 90%;
+    //     }
+    // }
 
-    &.ui-link--help {
-        &::before {
-            background-image: url("/img/help-blue.svg");
-        }
-    }
+    // &.ui-link--help {
+    //     &::before {
+    //         background-image: url("/img/help-blue.svg");
+    //     }
+    // }
 
-    &.ui-link--print {
-        &::before {
-            background-image: url("/img/printer.svg");
-            background-size: 95%;
-        }
-    }
+    // &.ui-link--print {
+    //     &::before {
+    //         background-image: url("/img/printer.svg");
+    //         background-size: 95%;
+    //     }
+    // }
 
-    &.ui-link--view {
-        &::before {
-            background-image: url("/img/search--blue.svg");
-            background-size: 90%;
-        }
-    }
+    // &.ui-link--view {
+    //     &::before {
+    //         background-image: url("/img/search--blue.svg");
+    //         background-size: 90%;
+    //     }
+    // }
 
-    &.ui-link--delete {
-        &::before {
-            background-image: url("/img/trash--blue.svg");
-            background-size: 80%;
-        }
-    }
+    // &.ui-link--delete {
+    //     &::before {
+    //         background-image: url("/img/trash--blue.svg");
+    //         background-size: 80%;
+    //     }
+    // }
 
-    &.ui-link--sort-by-increase {
-        &::before {
-            background-image: url("/img/sort-by-increase.svg");
-            background-size: 80%;
-        }
-    }
+    // &.ui-link--sort-by-increase {
+    //     &::before {
+    //         background-image: url("/img/sort-by-increase.svg");
+    //         background-size: 80%;
+    //     }
+    // }
 
-    &.ui-link--sort-by-decrease {
-        &::before {
-            background-image: url("/img/sort-by-decrease.svg");
-            background-size: 80%;
-        }
-    }
+    // &.ui-link--sort-by-decrease {
+    //     &::before {
+    //         background-image: url("/img/sort-by-decrease.svg");
+    //         background-size: 80%;
+    //     }
+    // }
 
-    &.ui-link--lightning {
-        &::before {
-            background-image: url("/img/lightning.svg");
-            background-size: 90%;
-        }
-    }
+    // &.ui-link--lightning {
+    //     &::before {
+    //         background-image: url("/img/lightning.svg");
+    //         background-size: 90%;
+    //     }
+    // }
 
-    &.ui-link--dashed {
-        text-decoration: none;
-        //border-bottom: 1px dashed $ui-link;
-    }
+    // &.ui-link--dashed {
+    //     text-decoration: none;
+    //     border-bottom: 1px dashed $ui-link;
+    // }
 }
