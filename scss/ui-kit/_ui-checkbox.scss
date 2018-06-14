@@ -13,7 +13,7 @@
     font: 14px $Helvetica;
     user-select: none;
     cursor: pointer;
-    color: $ui-grey-text;
+    //color: $ui-grey-text;
     transition: color 0.2s ease-out;
     margin: 0;
 
@@ -24,7 +24,7 @@
         width: 18px;
         height: 18px;
         margin-right: 10px;
-        border: 1px solid $ui-grey;
+        //border: 1px solid $ui-grey;
         border-radius: 3px;
         background: #fff url('/img/check_yes.svg') no-repeat;
         background-size: 12px 9px;
@@ -65,8 +65,8 @@
     }
 
     & + .vv-checkbox__label::before {
-        background-color: $ui-blue;
-        border-color: $ui-blue;
+        //background-color: $ui-blue;
+        //border-color: $ui-blue;
     }
 }
 
@@ -76,15 +76,15 @@
     color: #000;
 
     &::before {
-        border-color: $ui-blue;
+        //border-color: $ui-blue;
     }
 }
 
 .vv-checkbox--green:checked {
 
     & + .vv-checkbox__label::before {
-        background-color: $ui-green;
-        border-color: $ui-green;
+        //background-color: $ui-green;
+        //border-color: $ui-green;
     }
 }
 
@@ -94,6 +94,6 @@
     color: #000;
 
     &::before {
-        border-color: $ui-green;
+        //border-color: $ui-green;
     }
 }

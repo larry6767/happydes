@@ -6,7 +6,7 @@ a:not(.ui-button):active,
 .ui-link:focus,
 .ui-link:visited,
 .ui-link:active {
-    color: $ui-link;
+    //color: $ui-link;
     text-decoration: underline;
     cursor: pointer;
 
@@ -31,7 +31,7 @@ a:not(.ui-button):active,
     }
 
     &.ui-link--disabled {
-        color: $ui-grey;
+        //color: $ui-dark-violet;
         cursor: not-allowed;
         text-decoration: none;
 
@@ -155,6 +155,6 @@ a:not(.ui-button):active,
 
     &.ui-link--dashed {
         text-decoration: none;
-        border-bottom: 1px dashed $ui-link;
+        //border-bottom: 1px dashed $ui-link;
     }
 }

@@ -18,7 +18,7 @@
     border: none;
     text-decoration: none;
     transition: background 0.2s ease-out;
-    color: $ui-grey-text-2;
+    //color: $ui-dark-violet;
 
     &:hover {
         text-decoration: none;
@@ -43,17 +43,17 @@
     }
 
     &--transparent {
-        color: $ui-link;
+        //color: $ui-link;
         background: transparent;
         border: 1px solid #b9c5dd;
     }
     
     &--blue {
-        background: $ui-blue-gradient;
+        //background: $ui-blue-gradient;
         color: #fff;
 
         &:hover {
-            background: $ui-blue-gradient-hover;
+            //background: $ui-blue-gradient-hover;
         }
     }
 
@@ -61,7 +61,7 @@
     &--blue.ui-button--disabled:hover,
     &--blue:disabled,
     &--blue:disabled:hover {
-        background: $ui-blue-gradient-disabled;
+        //background: $ui-blue-gradient-disabled;
     }
 
     &--blue-light {
@@ -69,7 +69,7 @@
         color: #fff;
 
         &:hover {
-            background: $ui-blue-gradient-hover;
+            //background: $ui-blue-gradient-hover;
         }
     }
 
@@ -83,28 +83,28 @@
     }
 
     &--grey {
-        background: $ui-grey-gradient;
-        color: $ui-grey-text-2;
+        //background: $ui-grey-gradient;
+        //color: $ui-dark-violet;
 
         &:hover {
-            background: $ui-grey-gradient-hover;
+            //background: $ui-grey-gradient-hover;
         }
     }
 
     &--grey-blue {
         background: #D6DCE4;
-        color: $ui-grey-text-2;
+        //color: $ui-dark-violet;
     }
 
     &--white {
         background: #fff;
-        color: $ui-grey-text-2;
+        //color: $ui-grey-text-2;
     }
 
     &--green-line {
         background: none;
-        border: 1px solid $ui-green;
-        color: $ui-green;
+        //border: 1px solid $ui-green;
+        //color: $ui-green;
 
         &:hover {
             background: rgba(255, 255, 255, 0.3);
@@ -135,7 +135,7 @@
     }
 
     &--green {
-        background: $ui-green-gradient;
+        //background: $ui-green-gradient;
         color: #fff;
 
         &:hover {
@@ -149,7 +149,7 @@
     &--green:disabled,
     &--green:disabled:hover {
         background: linear-gradient(#D6E4D7, #C7D9C8);
-        color: $ui-grey-text;
+        //color: $ui-grey-text;
     }
 
     &--arrow-down {

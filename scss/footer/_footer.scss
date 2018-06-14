@@ -2,7 +2,7 @@ $transition-type: .2s ease;
 
 .footer {
     padding: 25px 0;
-    background: $ui-grey-dark;
+    //background: $ui-grey-dark;
     font: 14px $Helvetica;
 
     @include mobile {
@@ -39,7 +39,7 @@ $transition-type: .2s ease;
         @include mobile {
             box-sizing: border-box;
             width: 100%;
-            border-bottom: 2px solid rgba($ui-grey-text-dark, .5);
+            //border-bottom: 2px solid rgba($ui-grey-text-dark, .5);
             padding: 10px 15px 0;
             display: flex;
             flex-wrap: wrap;

@@ -25,10 +25,10 @@ gulp.task('style', function () {
         .pipe(plumber())
         // .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(inline_base64({
-            maxSize: 14 * 1024,
-            debug: true
-        }))
+        // .pipe(inline_base64({
+        //     maxSize: 14 * 1024,
+        //     debug: true
+        // }))
         .pipe(postcss([
             autoprefixer({
                 browsers: [
