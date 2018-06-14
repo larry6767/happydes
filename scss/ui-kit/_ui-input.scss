@@ -7,13 +7,13 @@
     box-sizing: border-box;
     height: 32px;
     padding: 5px 10px;
-    border: 1px solid $ui-grey;
+    //border: 1px solid $ui-grey;
     border-radius: 4px;
     background: #fff;
-    font: 14px $Helvetica;
+    font: 14px $Comfortaa;
 
     &:focus {
-        border-color: $ui-blue-focus;
+        //border-color: $ui-blue-focus;
         outline: none;
         box-shadow: none;
     }
