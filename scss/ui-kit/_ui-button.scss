@@ -23,6 +23,8 @@
         content: attr(data-text);
         border-radius: 22px;
         padding: 10px 23px;
+        flex-grow: 1;
+        text-align: center;
     }
 
     &:hover {
@@ -59,7 +61,7 @@
         }
     }
 
-    &--white {
+    &--gradient-bg {
         background: $ui-white;
 
         &::before {
