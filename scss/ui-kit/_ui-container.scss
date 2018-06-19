@@ -3,12 +3,16 @@
     width: 1140px;
     margin: 0 auto;
 
+    @include desktop {
+        width: 980px;
+    }
+
     @include tablet {
         width: 748px;
     }
 
     @include mobile {
-        width: 100%;
-        min-width: 320px;
+        width: calc(100% - 20px);
+        min-width: 300px;
     }
 }
