@@ -2,48 +2,90 @@
     font: 400 14px $Comfortaa;
     color: $ui-dark-violet;
     letter-spacing: 2px;
-    display: flex;
-    flex-direction: column;
     line-height: 22px;
+    padding: 80px 0;
+
+    @include tablet {
+        padding: 60px 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+        font-size: 12px;
+    }
 
     &__title {
         font: 700 30px $Comfortaa; 
         text-transform: uppercase;
         margin-bottom: 40px;
-        align-self: center;   
+        align-self: center; 
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            text-align: center;
+        }
     }
 
     &__inner {
         display: flex;
+        flex-direction: column;
+    }
+
+    &__blocks {
+        display: flex;
         justify-content: space-between;
-        flex-direction: row;
-    }
+        width: 100%;
 
-    &__block {
-        width: 540px;
-        height: 340px;
+        @include mobile {
+            flex-direction: column;
+        }
     }
-
 }
 
 .about-block {
+    width: 470px;
+
+    @include tablet {
+        width: 360px;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
 
     &__photo {
-        height: 340px;
+        width: 100%;
+        height: 360px;
         background-image: url(../img/about_photo.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-    }
 
-    &__text-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        @include tablet {
+            height: 360px;
+        }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__text {
         margin-bottom: 40px;
+
+        @include tablet {
+            margin-bottom: 30px;
+        }
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__logo {
@@ -54,21 +96,25 @@
         font: 700 18px $Comfortaa;
     }
 
-    &__item {
+    &__reason {
         display: flex;
-        height: 20px;
-        margin-bottom: 15px; 
-    }
+        margin-bottom: 15px;
 
-    &__item-mark {
-        content: url(/img/mark.svg);
-        display: block;
-        width: 30px;
-        margin-right: 15px;
-    }
+        &::before {
+            content: url(/img/mark.svg);
+            display: block;
+            width: 30px;
+            margin-right: 15px;
 
-    &__item-text {
-        align-self: center;
+            @include tablet {
+                width: 20px;
+                margin: 5px 10px 0 0;
+            }
+
+            @include mobile {
+                width: 20px;
+                margin: 5px 10px 0 0;
+            }
+        }
     }
- 
 }
