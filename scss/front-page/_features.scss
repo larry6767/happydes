@@ -62,9 +62,24 @@
 
 	}
 
-
 	&:hover .features-item__icon {
 		background-color: $ui-white;
+
+		// &--architecture {
+		// 	content: url('/img/architecture--hover.svg');
+		// }
+
+		// &--design {
+		// 	content: url('/img/design--hover.svg');
+		// }
+
+		// &--decor {
+		// 	content: url('/img/decor--hover.svg');
+		// }
+
+		// &--landscape {
+		// 	content: url('/img/landscape--hover.svg');
+		// }
 	}
 
 	&__icon {
@@ -78,13 +93,24 @@
 		&--architecture {
 			content: url('/img/architecture.svg');
 		}
+
+		&--design {
+			content: url('/img/design.svg');
+		}
+
+		&--decor {
+			content: url('/img/decor.svg');
+		}
+
+		&--landscape {
+			content: url('/img/landscape.svg');
+		}
 	}
 
 	&__title {
 		font-size: 18px;
 		text-transform: uppercase;
 		margin-bottom: 15px;
-
 	}
 
 	&__text {
