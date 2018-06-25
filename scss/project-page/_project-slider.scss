@@ -1,0 +1,33 @@
+.project-slider {
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__photo {
+        height: 450px;
+        width: auto;
+        background-image: url(../img/about_photo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include tablet {
+            height: 355px;
+        }
+
+        @include mobile {
+            height: 152px;
+        }
+    }
+}
