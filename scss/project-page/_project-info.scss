@@ -1,0 +1,135 @@
+.project-info {
+    font: 400 14px $Comfortaa;
+    color: $ui-dark-violet;
+    letter-spacing: 2px;
+    line-height: 22px;
+
+    @include tablet {
+        font: 400 12px $Comfortaa;
+        letter-spacing: 1px;
+        line-height: 16px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center; 
+        }
+    }
+}
+
+.project-common-info {
+   width: 262px; 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   text-transform: uppercase;
+
+   @include tablet {
+        width: 178px; 
+    }
+
+    @include mobile {
+        width: 300px;
+        align-items: center; 
+    }
+
+   &__headline {
+        font: 700 14px $Comfortaa;
+        margin-bottom: 30px;
+
+        @include tablet {
+            font: 700 12px $Comfortaa;
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+   }
+
+   &__project-name {
+        font: 700 18px $Comfortaa;
+        margin-bottom: 15px;
+
+        @include tablet {
+            font: 700 16px $Comfortaa;
+        }
+   }
+
+   &__title {
+        font: 700 14px $Comfortaa; 
+        margin-bottom: 5px;
+
+        @include tablet {
+            font: 700 12px $Comfortaa;
+        }
+   }
+
+   &__text {
+        margin-bottom: 15px;
+   }
+}
+
+.project-description {
+    width: 818px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet {
+        width: 531px; 
+    }
+
+    @include mobile {
+        width: 300px; 
+        align-items: center;
+    }
+
+    &__headline {
+        font: 700 14px $Comfortaa;
+        text-transform: uppercase; 
+        margin-bottom: 30px;
+
+        @include tablet {
+            font: 700 12px $Comfortaa;
+            margin-bottom: 20px;
+        }
+
+        @include mobile { 
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        height: 190px;
+        overflow: hidden;
+
+        @include tablet {
+            margin-bottom: 20px;
+            height: 180px;
+        }
+
+        @include mobile { 
+            text-align: center; 
+        }
+    }
+
+    &__button {
+        flex-grow: 0;
+        text-transform: uppercase; 
+        font: 700 14px $Comfortaa;
+
+        @include tablet {
+            font: 700 12px $Comfortaa;
+        }
+
+        @include mobile { 
+            align-self: center; 
+        }
+    }
+}
