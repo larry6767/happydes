@@ -1,90 +1,144 @@
 .catalog {
-    padding-bottom: 60px;
+  padding-bottom: 60px;
 
-    &__inner {
-        display: flex;
-        justify-content: space-between;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
     }
+  }
 }
 
 .catalog-filter {
-    padding: 50px 25px 25px;
-    background: $ui-gradient;
-    width: 200px;
-    border-radius: 24px;
+  padding: 50px 25px 25px;
+  background: $ui-gradient;
+  width: 200px;
+  border-radius: 24px;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
 
-    &__title {
-        margin-bottom: 40px;
-        font-size: 24px;
-        text-transform: uppercase;
-    }
-    &__button {
-        margin-bottom: 10px;
+  @include mobile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 25px;
+    justify-content: center;
+  }
 
-        &::before {
-            text-transform: uppercase;
-            font-size: 12px;
-        }
+  &__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include mobile {
+      font-size: 18px;
+      margin-bottom: 20px;
+      width: 100%;
     }
+  }
+  &__button {
+    margin-bottom: 10px;
+
+    @include mobile {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin: 0;
+
+      @include mobile {
+        margin: 0;
+      }
+    }
+
+    &::before {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
 }
 
 .catalog-list {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-    &__item {
-        background: $ui-dark-violet;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__item {
+    background: $ui-dark-violet;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+
+    @include tablet {
+      width: 250px;
+      height: 250px;
     }
+
+    @include mobile {
+      width: 300px;
+      height: 300px;
+    }
+  }
 }
 
 .catalog-item {
-    background-image: url('/img/photo-catalog-item.jpg');
-    background-size: cover;
-    font-size: 12px;
+  background-image: url("/img/photo-catalog-item.jpg");
+  background-size: cover;
+  font-size: 12px;
 
-    
+  &__inner {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $ui-gradient;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s;
+    cursor: pointer;
+  }
 
-    &__text {
-        display: inline-flex;
-        flex-flow: wrap; 
-        padding-right: 10px;
-        padding-top: 10px;
-        margin-bottom: 50px;
+  &:hover .catalog-item__inner {
+    opacity: 0.8;
+  }
+
+  &__cell {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &--direction-column {
+      flex-direction: column;
     }
+  }
 
+  &__text {
+    display: inline-flex;
+    flex-flow: wrap;
+  }
 
+  &__subtitle {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
 
-    &__subtitle{
-        font-size: 10px;
-        text-transform: uppercase;
-        margin-bottom: 50px;
-    }
-
-    &__title {
-        font-size: 16px;
-        text-transform: uppercase;
-    }
-
-    &__inner{
-        background: $ui-gradient;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        transition: opacity .5s;
-        cursor: pointer;
-        display: flex;
-        flex-direction: inherit;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    &:hover .catalog-item__inner {
-        opacity: 0.8;
-    }
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 }
