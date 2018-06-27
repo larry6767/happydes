@@ -3,11 +3,20 @@
     color: $ui-dark-violet;
     letter-spacing: 2px;
     line-height: 22px;
+    margin-bottom: 60px;
 
     @include tablet {
-        font: 400 12px $Comfortaa;
+        font-size: 12px;
         letter-spacing: 1px;
         line-height: 16px;
+        margin-bottom: 40px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        margin-bottom: 40px;
     }
 
     &__inner {
@@ -22,7 +31,7 @@
 }
 
 .project-common-info {
-   width: 262px; 
+   width: 236px; 
    display: flex;
    flex-direction: column;
    align-items: flex-end;
@@ -38,34 +47,46 @@
     }
 
    &__headline {
-        font: 700 14px $Comfortaa;
+        font-size: 14px;
+        font-weight: 700;
         margin-bottom: 30px;
 
         @include tablet {
-            font: 700 12px $Comfortaa;
+            font-size: 12px;
             margin-bottom: 20px;
         }
 
         @include mobile {
-            margin-bottom: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
         }
    }
 
    &__project-name {
-        font: 700 18px $Comfortaa;
+        font-size: 18px;
+        font-weight: 700;
         margin-bottom: 15px;
 
         @include tablet {
-            font: 700 16px $Comfortaa;
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 16px;
         }
    }
 
    &__title {
-        font: 700 14px $Comfortaa; 
+        font-size: 14px;
+        font-weight: 700; 
         margin-bottom: 5px;
 
         @include tablet {
-            font: 700 12px $Comfortaa;
+            font-size: 12px;
+        }
+
+        @include mobile {
+            font-size: 12px;
         }
    }
 
@@ -75,10 +96,11 @@
 }
 
 .project-description {
-    width: 818px;
+    width: 705px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    letter-spacing: 1px;
 
     @include tablet {
         width: 531px; 
@@ -90,16 +112,18 @@
     }
 
     &__headline {
-        font: 700 14px $Comfortaa;
+        font-size: 14px;
+        font-weight: 700; 
         text-transform: uppercase; 
         margin-bottom: 30px;
 
         @include tablet {
-            font: 700 12px $Comfortaa;
+            font-size: 12px;
             margin-bottom: 20px;
         }
 
         @include mobile { 
+            font-size: 12px;
             margin-bottom: 15px;
         }
     }
@@ -122,14 +146,16 @@
     &__button {
         flex-grow: 0;
         text-transform: uppercase; 
-        font: 700 14px $Comfortaa;
+        font-size: 14px;
+        font-weight: 700; 
 
         @include tablet {
-            font: 700 12px $Comfortaa;
+            font-size: 12px;
         }
 
         @include mobile { 
-            align-self: center; 
+            align-self: center;
+            font-size: 12px; 
         }
     }
 }

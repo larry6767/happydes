@@ -5,11 +5,13 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 6px 10px 5px;
+    padding: 6px 30px 5px;
     border: 1px solid $ui-white;
     border-radius: 4px;
     background: #fff;
-    font: 14px $Comfortaa;
+    font: 300 14px $Comfortaa;
+    letter-spacing: 1px;
+    color: $ui-dark-violet;
 
     &:focus {
         border-color: $ui-white;
@@ -19,5 +21,13 @@
 
     &--m {
         height: 36px;
+    }
+
+    @include tablet {
+        font-size: 12px;
+    }
+
+    @include mobile {
+        font-size: 12px;
     }
 }

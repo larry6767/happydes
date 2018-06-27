@@ -1,14 +1,14 @@
 .header-top {
     font: 700 16px $Comfortaa;
     color: $ui-dark-violet;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 
     @include tablet {
-        font: 700 12px $Comfortaa;
+        font-size: 12px;
     }
 
     @include mobile {
-        font: 700 12px $Comfortaa;
+        font-size: 12px;
     }
 
     &::after {

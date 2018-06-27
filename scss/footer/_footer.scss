@@ -1,15 +1,32 @@
 .footer {
-    padding: 20px 0;
+    color: $ui-dark-violet;
     background: $ui-white;
-    font: 18px $Comfortaa;
+    font: 700 16px $Comfortaa;
+    letter-spacing: 2px;
 
     @include tablet {
-        font-size: 14px;
+        font: 700 12px $Comfortaa;
     }
 
     @include mobile {
-        padding: 20px 0;
-        font-size: 14px;
+        font: 700 12px $Comfortaa;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $ui-gradient;
+        margin-bottom: 30px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -17,22 +34,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 
     @include tablet {
         position: relative;
+        margin-bottom: 20px;
     }
 
     @include mobile {
         flex-direction: column;
-    }
-    
-    &__copyright {
-        color: #000;
-        line-height: 1;
-
-        @include mobile {
-            order: 1;
-        }
+        margin-bottom: 15px;
     }
 
     &__column:not(:last-child) {

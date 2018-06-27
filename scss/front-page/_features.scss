@@ -1,6 +1,15 @@
 .features {
 	background: $ui-gradient;
+	color: $ui-dark-violet;
 	padding: 60px 0;
+
+	@include tablet {
+		padding: 40px 0;
+	}
+
+	@include mobile {
+		padding: 40px 0;
+	}
 
 	&__inner {
 		display: flex;
@@ -9,19 +18,25 @@
 	}
 
 	&__title {
-		font-size: 30px;
+		font: 700 30px $Comfortaa;
 		text-transform: uppercase;
+		letter-spacing: 2px;
 		width: 600px;
 		text-align: center;
-		margin-bottom: 15px;
+		margin-bottom: 40px;
+
+		@include tablet {
+			font: 700 24px $Comfortaa;
+			letter-spacing: 1px;
+			margin-bottom: 30px;
+		}
 
 		@include mobile {
 			width: 100%;
+			font: 700 20px $Comfortaa;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
 		}
-	}
-
-	&__button {
-		margin-top: 50px;
 	}
 }
 
@@ -29,12 +44,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 90%;
+	width: 100%;
 
 	@include tablet {
-		flex-wrap: wrap;
+		//flex-wrap: wrap;
 		justify-content: space-around;
-		width: 80%;
+		width: 100%;
 	}
 
 	@include mobile {
@@ -48,38 +63,66 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 25%;
+	width: 220px;
 	cursor: pointer;
+	margin-bottom: 40px;
 
 	@include tablet {
-		width: 40%;
+		width: 25%;
 		margin-bottom: 40px;
 
 	}
 
 	@include mobile {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+		width: 300px;
 
+	}
+
+	&--features {
+		margin-bottom: 0px;
+
+		@include tablet {
+			margin-bottom: 0px;
+		}
 	}
 
 	&:hover .features-item__icon {
 		background-color: $ui-white;
+		box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
 
-		// &--architecture {
-		// 	content: url('/img/architecture--hover.svg');
-		// }
+		&--architecture {
+			content: url('/img/architecture--hover.svg');
+		}
 
-		// &--design {
-		// 	content: url('/img/design--hover.svg');
-		// }
+		&--design {
+			content: url('/img/design--hover.svg');
+		}
 
-		// &--decor {
-		// 	content: url('/img/decor--hover.svg');
-		// }
+		&--decor {
+			content: url('/img/decor--hover.svg');
+		}
 
-		// &--landscape {
-		// 	content: url('/img/landscape--hover.svg');
-		// }
+		&--landscape {
+			content: url('/img/landscape--hover.svg');
+		}
+
+		&--comfort {
+			content: url('/img/comfort--hover.svg');
+		}
+		
+		&--relevance {
+			content: url('/img/relevance--hover.svg');
+		}
+
+		&--rent {
+			content: url('/img/rent--hover.svg');
+		}
+
+		&--saving {
+			content: url('/img/saving--hover.svg');
+		}
+
 	}
 
 	&__icon {
@@ -87,8 +130,23 @@
 		height: 180px;
 		border: 2px solid $ui-white;
 		border-radius: 50%;
-		margin-bottom: 17px;
-		padding: 30px 0;
+		margin-bottom: 30px;
+		padding: 40px 0;
+		transition: background 0.4s;
+
+		@include tablet {
+			margin-bottom: 20px;
+			padding: 36px 0;
+			width: 160px;
+			height: 160px;
+		}
+
+		@include mobile{
+			margin-bottom: 20px;
+			padding: 36px 0;
+			width: 160px;
+			height: 160px;
+		}
 
 		&--architecture {
 			content: url('/img/architecture.svg');
@@ -105,16 +163,63 @@
 		&--landscape {
 			content: url('/img/landscape.svg');
 		}
+
+		&--comfort {
+			content: url('/img/comfort.svg');
+		}
+		
+		&--relevance {
+			content: url('/img/relevance.svg');
+		}
+
+		&--rent {
+			content: url('/img/rent.svg');
+		}
+
+		&--saving {
+			content: url('/img/saving.svg');
+		}
+
 	}
 
 	&__title {
-		font-size: 18px;
+		font: 700 18px $Comfortaa;
 		text-transform: uppercase;
 		margin-bottom: 15px;
+
+		@include tablet {
+			font: 700 16px $Comfortaa;
+			margin-bottom: 10px;
+		}
+
+		@include mobile {
+			font: 700 16px $Comfortaa;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
 		text-align: center;
 		width: 202px;
+
+		@include tablet {
+			width: 176px;
+		}
+
+		@include mobile {
+			width: 260px;
+		}
+
+		&--features {
+			width: 212px;
+
+			@include tablet {
+				width: 186px;
+			}
+
+			@include mobile {
+				width: 266px;
+			}
+		}
 	}	
 }
