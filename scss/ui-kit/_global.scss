@@ -19,6 +19,15 @@ header {
 main {
     font-size: 14px;
     flex: 1 0 auto;
+
+    @include tablet {
+        font-size: 12px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+    }
+
 }
 
 footer {

@@ -1,6 +1,17 @@
 .contact-form-block {
 	background: $ui-gradient;
+	color: $ui-dark-violet;
 	padding: 60px 0;
+
+	@include tablet {
+		padding: 40px 0;
+		letter-spacing: 1px;
+	}
+
+	@include mobile {
+		padding: 40px 0;
+		letter-spacing: 1px;
+	}
 
 	&__inner {
 		display: flex;
@@ -10,20 +21,41 @@
 	
 	&__tittle {
 		font-size: 30px;
+        font-weight: 700;
 		text-transform: uppercase;
 		width: 600px;
 		text-align: center;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
+		line-height: 48px;
+
+		@include tablet {
+			font-size: 24px;
+        	line-height: 42px;
+		}
 
 		@include mobile {
 			width: 100%;
+			font-size: 20px;
+			line-height: 38px;
 		}
 	}
 	
 	&__subtittle {
 		font-size: 30px;
-		margin-bottom: 20px;
+        font-weight: 300;
+		margin-bottom: 30px;
 		text-align: center;
+
+		@include tablet {
+			font-size: 24px;
+        	line-height: 42px;
+		}
+
+		@include mobile {
+			font-size: 20px;
+			line-height: 38px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -36,9 +68,17 @@
 	display: flex;
 	justify-content: space-between;
 
+	@include tablet {
+		padding: 30px 30px;
+	}
+
 	@include mobile {
 		flex-direction: column;
 		padding: 30px;
+	}
+
+	&:hover {
+		box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
 	}
 
 	&__button {

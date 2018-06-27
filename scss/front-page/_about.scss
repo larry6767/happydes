@@ -6,20 +6,22 @@
     padding: 80px 0;
 
     @include tablet {
-        padding: 60px 0;
+        padding: 60px 0 45px;
         font-size: 12px;
         letter-spacing: 1px;
     }
 
     @include mobile {
-        padding: 40px 0;
+        padding: 40px 0 25px;
         font-size: 12px;
+        letter-spacing: 1px;
     }
 
     &__title {
-        font: 700 30px $Comfortaa; 
+        font-size: 30px;
+        font-weight: 700;
         text-transform: uppercase;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         align-self: center; 
 
         @include tablet {
@@ -27,7 +29,7 @@
         }
 
         @include mobile {
-            font-size: 24px;
+            font-size: 20px;
             text-align: center;
         }
     }
@@ -77,7 +79,7 @@
     }
 
     &__text {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
 
         @include tablet {
             margin-bottom: 30px;
@@ -85,15 +87,34 @@
 
         @include mobile {
             text-align: center;
+            margin-bottom: 15px;
         }
     }
 
     &__logo {
-        font: 400 18px $Comfortaa;
+        font-size: 18px;
+        font-weight: 400;
+
+        @include tablet {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
 
     &__logo-bold {
-        font: 700 18px $Comfortaa;
+        font-size: 18px;
+        font-weight: 700;
+
+        @include tablet {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
 
     &__reason {
@@ -107,13 +128,13 @@
             margin-right: 15px;
 
             @include tablet {
-                width: 20px;
-                margin: 5px 10px 0 0;
+                width: 30px;
+                margin-right: 10px;
             }
 
             @include mobile {
-                width: 20px;
-                margin: 5px 10px 0 0;
+                width: 30px;
+                margin: 1px 10px 0 0;
             }
         }
     }
