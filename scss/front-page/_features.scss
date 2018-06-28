@@ -47,7 +47,6 @@
 	width: 100%;
 
 	@include tablet {
-		//flex-wrap: wrap;
 		justify-content: space-around;
 		width: 100%;
 	}
@@ -90,6 +89,7 @@
 	&:hover .features-item__icon {
 		background-color: $ui-white;
 		box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+		transition: box-shadow 0.4s;
 
 		&--architecture {
 			content: url('/img/architecture--hover.svg');
