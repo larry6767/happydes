@@ -28,7 +28,7 @@
 
         @include tablet {
             padding: 10px 0 10px;
-        }  
+        }
 
         @include mobile {
             flex-direction: column;
@@ -58,15 +58,26 @@
         height: 30px;
         border-radius: 50%;
         background: $ui-gradient;
+        padding: 5px 0;
+
+        &:hover {
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            transition: box-shadow 0.4s;
+        }
 
         &--twitter {
+            content: url(/img/twitter.svg);
+            display: block;
+        }
 
-            &::after {
-                content: url(/img/twitter.svg);
-                display: block;
-                width: 24,6px;
-                hight: auto;
-            }
+        &--instagram {
+            content: url(/img/instagram.svg);
+            display: block;
+        }
+
+        &--pinterest {
+            content: url(/img/pinterest.svg);
+            display: block;
         }
     }
 
@@ -87,5 +98,5 @@
                 margin-bottom: 0;
             }
         }
-    }   
+    }
 }
