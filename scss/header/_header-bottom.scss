@@ -33,31 +33,107 @@
 
     }
 
-    &__button {
-        width: 30px;
-        height: 2px;
-        background: $ui-purple;
-        position: relative;
+    // &__button-wrapper {
+    //     cursor: pointer;
+    //     width: 30px;
+    //     height: 16px;
+    // }
 
-        &::after {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 2px;
-            background: $ui-purple;
-            position: absolute;
-            top: -6px;
+    // &__button {
+    //     width: 30px;
+    //     height: 2px;
+    //     background: $ui-purple;
+    //     position: relative;
+
+    //     &::after {
+    //         content: "";
+    //         display: block;
+    //         width: 30px;
+    //         height: 2px;
+    //         background: $ui-purple;
+    //         margin-bottom: 6px;
+    //         // position: absolute;
+    //         // top: -6px;
+    //     }
+
+    //     &::before {
+    //         content: "";
+    //         display: block;
+    //         width: 30px;
+    //         height: 2px;
+    //         background: $ui-purple;
+    //         margin-bottom: 6px;
+    //         // position: absolute;
+    //         // top: 6px;
+    //     }
+    // }
+
+    &__burger-menu {
+        position: relative;
+        width: 30px;
+        height: 16px;
+        margin: auto 10px auto 20px;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: width 0.3s,
+            padding 0.3s,
+            margin 0.3s,
+            opacity 0.3s;
+
+        &--active {
+            z-index: 101;
         }
+    }
+
+    &__burger {
+        position: absolute;
+        background: $ui-purple;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        right: 0px;
+        margin-top: -1px;
+        opacity: 1;
 
         &::before {
-            content: "";
-            display: block;
+            position: absolute;
+            background: $ui-purple;
             width: 30px;
             height: 2px;
-            background: $ui-purple;
-            position: absolute;
-            top: 6px;
+            top: 5px;
+            content: "";
+            display: block;
         }
+
+        &::after {
+            position: absolute;
+            background: $ui-purple;
+            width: 30px;
+            height: 2px;
+            bottom: 5px;
+            content: "";
+            display: block;
+        }
+    }
+
+    &__burger::after,
+    &__burger::before,
+    &__burger {
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__burger-menu--active &__burger::after{
+        transform: rotate(-45deg);
+        bottom: 0px;
+    }
+
+    &__burger-menu--active &__burger::before{
+        transform: rotate(45deg);
+        top: 0px;
+    }
+
+    &__burger-menu--active &__burger{
+        background: rgba(0,0,0,0);
     }
 
     &__logo {
@@ -70,6 +146,49 @@
 
         @include mobile {
             width: 200px;
+        }
+    }
+
+    &__menu {
+        user-select: none;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 40px;
+        left: -20px;
+        list-style-type: none;
+        padding: 3px;
+        margin: 0;
+        width: 300px;
+        border-radius: 10px;
+        background: $ui-white;
+        flex-direction: column;
+        box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__menu-item {
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &:hover {
+            background: $ui-gradient--transparent-light2;
+            box-shadow: 1px 1px 3px rgba(0,0,0,.05);
+        }
+
+        &:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 0;
         }
     }
 
