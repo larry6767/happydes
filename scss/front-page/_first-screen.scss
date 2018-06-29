@@ -1,6 +1,6 @@
 .first-screen {
     background: $ui-white;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 
     &__inner {
         display: flex;
@@ -36,12 +36,18 @@
     position: relative;
     background-image: url("/img/photo-catalog-item.jpg");
     background-size: cover;
+    background-position: center;
 
     &--author {
+        height: 415px;
+    }
 
+    &--melnikova {
+        background-image: url("/img/evgenia_melnikova.jpg");
     }
 
     &--short {
+        height: 205px;
 
     }
 
@@ -60,7 +66,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        padding: 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -70,6 +76,7 @@
         height: 100%;
         transition: opacity 0.4s;
         cursor: pointer;
+        text-transform: uppercase;
     }
 
     &:hover .first-screen-item__inner {
@@ -92,7 +99,11 @@
     }
 
     &__subtitle {
-        text-transform: uppercase;
+
+        &--author {
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
 
     &__title {
