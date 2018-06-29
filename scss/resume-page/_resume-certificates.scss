@@ -42,8 +42,6 @@
 }
 
 .certificates-list {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -64,7 +62,8 @@
         width: 220px;
         height: 220px;
         background: $ui-purple;
-        
+        margin: 0 15px;
+
 
         @include tablet {
             width: 172px;
