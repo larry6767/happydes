@@ -92,35 +92,35 @@
 		transition: box-shadow 0.4s;
 
 		&--architecture {
-			content: url('/img/architecture--hover.svg');
+			content: url('../img/architecture--hover.svg');
 		}
 
 		&--design {
-			content: url('/img/design--hover.svg');
+			content: url('../img/design--hover.svg');
 		}
 
 		&--decor {
-			content: url('/img/decor--hover.svg');
+			content: url('../img/decor--hover.svg');
 		}
 
 		&--landscape {
-			content: url('/img/landscape--hover.svg');
+			content: url('../img/landscape--hover.svg');
 		}
 
 		&--comfort {
-			content: url('/img/comfort--hover.svg');
+			content: url('../img/comfort--hover.svg');
 		}
-		
+
 		&--relevance {
-			content: url('/img/relevance--hover.svg');
+			content: url('../img/relevance--hover.svg');
 		}
 
 		&--rent {
-			content: url('/img/rent--hover.svg');
+			content: url('../img/rent--hover.svg');
 		}
 
 		&--saving {
-			content: url('/img/saving--hover.svg');
+			content: url('../img/saving--hover.svg');
 		}
 
 	}
@@ -149,35 +149,35 @@
 		}
 
 		&--architecture {
-			content: url('/img/architecture.svg');
+			content: url('../img/architecture.svg');
 		}
 
 		&--design {
-			content: url('/img/design.svg');
+			content: url('../img/design.svg');
 		}
 
 		&--decor {
-			content: url('/img/decor.svg');
+			content: url('../img/decor.svg');
 		}
 
 		&--landscape {
-			content: url('/img/landscape.svg');
+			content: url('../img/landscape.svg');
 		}
 
 		&--comfort {
-			content: url('/img/comfort.svg');
+			content: url('../img/comfort.svg');
 		}
-		
+
 		&--relevance {
-			content: url('/img/relevance.svg');
+			content: url('../img/relevance.svg');
 		}
 
 		&--rent {
-			content: url('/img/rent.svg');
+			content: url('../img/rent.svg');
 		}
 
 		&--saving {
-			content: url('/img/saving.svg');
+			content: url('../img/saving.svg');
 		}
 
 	}
@@ -221,5 +221,5 @@
 				width: 266px;
 			}
 		}
-	}	
+	}
 }

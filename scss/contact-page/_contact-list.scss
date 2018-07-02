@@ -59,13 +59,13 @@
         }
 
 		&--photo1 {
-			background-image: url('/img/resume_evgenia_melnikova.jpg');
+			background-image: url('../img/resume_evgenia_melnikova.jpg');
             background-size: cover;
             background-position: center;
 		}
 
 		&--photo2 {
-			background-image: url('/img/resume_maxim_krutko.jpg');
+			background-image: url('../img/resume_maxim_krutko.jpg');
             background-size: cover;
             background-position: center;
 		}
@@ -116,11 +116,11 @@
         }
 
         &--instagram {
-            content: url(/img/instagram.svg);
+            content: url('../img/instagram.svg');
             display: block;
         }
         &--facebook {
-            content: url(/img/facebook.svg);
+            content: url('../img/facebook.svg');
             display: block;
         }
     }
