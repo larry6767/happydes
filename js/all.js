@@ -32,6 +32,70 @@ $(document).ready(function () {
         }]
     });
 
+    $('.x-resume-slider').slick({
+        infinite: true,
+        speed: 300,
+        variableWidth: false,
+        draggable: true,
+        useCSS: true,
+        dots: true,
+        arrow: false,
+        prevArrow: '<div class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="16.813" height="31.91" viewBox="0 0 16.813 31.91"><path d="M.967 31.907c-.253 0-.506-.097-.7-.292-.386-.39-.386-1.02 0-1.41l14.148-14.252L.268 1.7C-.12 1.313-.12.68.268.29c.386-.388 1.013-.388 1.4 0L16.514 15.25c.386.39.386 1.02 0 1.41L1.667 31.615c-.193.195-.446.292-.7.292z" class="cls-1"/></svg></div>',
+        nextArrow: '<div class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="16.813" height="31.91" viewBox="0 0 16.813 31.91"><path d="M.967 31.907c-.253 0-.506-.097-.7-.292-.386-.39-.386-1.02 0-1.41l14.148-14.252L.268 1.7C-.12 1.313-.12.68.268.29c.386-.388 1.013-.388 1.4 0L16.514 15.25c.386.39.386 1.02 0 1.41L1.667 31.615c-.193.195-.446.292-.7.292z" class="cls-1"/></svg></div>',
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        swipeToSlide: 1,
+        responsive: [{
+          breakpoint: 1300,
+          settings: {
+              arrows: false
+          }
+        }]
+    });
+
+    // for less-more (project-page)
+    var $projectInfoContext = $('.x-project-info');
+    var moreHeight1 = $('.x-text', $projectInfoContext).outerHeight();
+    var lessHeight1 = 210;
+    $('.x-text', $projectInfoContext).css('height', lessHeight1);
+
+    $('.x-more-less', $projectInfoContext).on('click', function() {
+        var lessClass = 'project-description__button--less';
+        var moreClass = 'project-description__button--more';
+        var textClass = 'project-description__text--fade';
+        toggleLessMore.call(this, $projectInfoContext, lessClass, moreClass, textClass, lessHeight1, moreHeight1);
+    });
+
+    // for less-more (resume-page)
+    var $resumePageContext = $('.x-resume-first-screen');
+    var moreHeight2 = $('.x-text', $resumePageContext).outerHeight();
+    var lessHeight2 = $('.x-contact-item', $resumePageContext).outerHeight();
+    $('.x-text', $resumePageContext).css('height', lessHeight2);
+
+    $('.x-more-less', $resumePageContext).on('click', function() {
+        var lessClass = 'resume-text-block__button--less';
+        var moreClass = 'resume-text-block__button--more';
+        var textClass = 'resume-text-block--fade';
+        toggleLessMore.call(this, $resumePageContext, lessClass, moreClass, textClass, lessHeight2, moreHeight2);
+    });
+
+    function toggleLessMore(context, lessClass, moreClass, textClass, lessHeight, moreHeight) {
+        $('.x-text', context).toggleClass(textClass);
+        if ($(this).hasClass(lessClass)) {
+            $(this).removeClass(lessClass);
+            $(this).addClass(moreClass);
+            $('.x-text', context).animate({
+                height: lessHeight
+            }, 500);
+        } else {
+            $(this).removeClass(moreClass);
+            $(this).addClass(lessClass);
+            $('.x-text', context).animate({
+                height: moreHeight
+            }, 500);
+        }
+    }
+
     // for instagram
     var token = '281996503.6885368.8a3f2b0d96be4e82a6807bf3eb5aaccd', // я уже давал ссылку чуть выше
         userId = 281996503, // ID пользователя, можно выкопать в исходном HTML, можно использовать спец. сервисы либо просто смотрите следующий пример :)

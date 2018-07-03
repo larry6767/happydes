@@ -25,25 +25,25 @@
 
         @include mobile {
             flex-direction: column;
-            align-items: center; 
+            align-items: center;
         }
     }
 }
 
 .project-common-info {
-   width: 236px; 
+   width: 236px;
    display: flex;
    flex-direction: column;
    align-items: flex-end;
    text-transform: uppercase;
 
    @include tablet {
-        width: 178px; 
+        width: 178px;
     }
 
     @include mobile {
         width: 300px;
-        align-items: center; 
+        align-items: center;
     }
 
    &__headline {
@@ -78,7 +78,7 @@
 
    &__title {
         font-size: 14px;
-        font-weight: 700; 
+        font-weight: 700;
         margin-bottom: 5px;
 
         @include tablet {
@@ -103,18 +103,18 @@
     letter-spacing: 1px;
 
     @include tablet {
-        width: 531px; 
+        width: 531px;
     }
 
     @include mobile {
-        width: 300px; 
+        width: 300px;
         align-items: center;
     }
 
     &__headline {
         font-size: 14px;
-        font-weight: 700; 
-        text-transform: uppercase; 
+        font-weight: 700;
+        text-transform: uppercase;
         margin-bottom: 30px;
 
         @include tablet {
@@ -122,15 +122,15 @@
             margin-bottom: 20px;
         }
 
-        @include mobile { 
+        @include mobile {
             font-size: 12px;
             margin-bottom: 15px;
         }
     }
 
     &__text {
-        margin-bottom: 30px;
-        height: 190px;
+        position: relative;
+        margin-bottom: 20px;
         overflow: hidden;
 
         @include tablet {
@@ -138,24 +138,46 @@
             height: 180px;
         }
 
-        @include mobile { 
-            text-align: center; 
+        @include mobile {
+            text-align: center;
+        }
+
+        &--fade {
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            }
         }
     }
 
     &__button {
         flex-grow: 0;
-        text-transform: uppercase; 
-        font-size: 14px;
-        font-weight: 700; 
+
+        &--more {
+            &::before {
+                content: 'Читать дальше';
+            }
+        }
+
+        &--less {
+            &::before {
+                content: 'Свернуть текст';
+            }
+        }
 
         @include tablet {
             font-size: 12px;
         }
 
-        @include mobile { 
+        @include mobile {
             align-self: center;
-            font-size: 12px; 
+            font-size: 12px;
         }
     }
 }
