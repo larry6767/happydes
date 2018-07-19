@@ -1,3 +1,6 @@
+jQuery(document).ready(function($){
+  //you can now use $ as your jQuery object.
+  var body = $( 'body' );
 $(document).ready(function () {
     // for burger-menu
     $('.x-burger-menu').on('click', function() {
@@ -123,4 +126,5 @@ $(document).ready(function () {
             console.log(result); // пишем в консоль об ошибках
         }
     });
+});
 });

@@ -1,0 +1,28 @@
+</div><!-- #content -->
+
+	        <footer class="footer">
+            <div class="ui-container">
+                <div class="footer__bar footer-bar">
+                    
+                    <div class="footer-bar__column">
+                        <a class="ui-link ui-link--reverse footer-bar__link" href="tel:+79281208001">+7(928) 120 80 01</a>
+                    </div>
+                    
+                    <div class="footer-bar__column">
+                        <a class="ui-link ui-link--reverse footer-bar__link" href="mailto:inhappydes@gmail.com">inhappydes@gmail.com</a>
+                    </div>
+                    
+                    <div class="footer-bar__column">
+                        <div class="footer-bar__copyright">&copy; HappyDes 2018</div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </footer>
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

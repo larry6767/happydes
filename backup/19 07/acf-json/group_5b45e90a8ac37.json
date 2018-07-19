@@ -1,0 +1,201 @@
+{
+    "key": "group_5b45e90a8ac37",
+    "title": "Добавление проекта",
+    "fields": [
+        {
+            "key": "field_5b45cce0b9edd",
+            "label": "Текст о проекте",
+            "name": "project_text",
+            "type": "textarea",
+            "instructions": "Здесь нужно ввести минимальную информацию о проекте",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Вот такой замечательный проект",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b45c22f9a1f4",
+            "label": "Тип проекта",
+            "name": "project_type",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "дизайн": "Дизайн",
+                "архитектура": "Архитектура",
+                "декор": "Декор",
+                "ландшафт": "Ландшафт"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b45cd67e3930",
+            "label": "Автор проекта",
+            "name": "project_author",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ЕВГЕНИЯ МЕЛЬНИКОВА": "ЕВГЕНИЯ МЕЛЬНИКОВА",
+                "МАКСИМ КРУТЬКО": "МАКСИМ КРУТЬКО",
+                "ЕВГЕНИЯ МЕЛЬНИКОВА <br>И МАКСИМ КРУТЬКО": "ЕВГЕНИЯ МЕЛЬНИКОВА <br>И МАКСИМ КРУТЬКО"
+            },
+            "default_value": [
+                "ЕВГЕНИЯ МЕЛЬНИКОВА"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b45cebd25a08",
+            "label": "Площадь проекта",
+            "name": "project_area",
+            "type": "number",
+            "instructions": "Площадь, масштабы проекта",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "placeholder": "",
+            "prepend": "",
+            "append": "М.КВ.",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b45d0072ac52",
+            "label": "Год завершения, работы над проектом",
+            "name": "projeсt_year",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "__",
+            "prepend": 20,
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b45e932d70a7",
+            "label": "Галерея проекта",
+            "name": "projeсt_slider",
+            "type": "gallery",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 50,
+            "insert": "append",
+            "library": "uploadedTo",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b4f03f3680bc",
+            "label": "Миниатюра проекта",
+            "name": "projeсt_mini",
+            "type": "image",
+            "instructions": "Выберите самое представительно, красивое изображение проекта",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "uploadedTo",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1531991455
+}
