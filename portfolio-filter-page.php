@@ -5,23 +5,23 @@
 get_header();
 
 function happ_font_reduction($t_string,$size,$font)
-{
+	{
 
-    $words  = explode(' ', ($t_string));
-    $longestWordLength = 0;
-    $longestWord = '';
-        foreach ($words as $word){  
-            if ($longestWordLength < mb_strlen($word)) {
-                $longestWordLength = mb_strlen($word);
-                $longestWord = $word;
-                }
-        }
-    $tempest = mb_strlen($longestWord);
+	    $words  = explode(' ', ($t_string));
+	    $longestWordLength = 0;
+	    $longestWord = '';
+	        foreach ($words as $word){  
+	            if ($longestWordLength < mb_strlen($word)) {
+	                $longestWordLength = mb_strlen($word);
+	                $longestWord = $word;
+	                }
+	        }
+	    $tempest = mb_strlen($longestWord);
 
-    if ($tempest >= $size ){
-    return ('style="' . 'font-size: ' . "$font" . 'px;" ');
-    }
-}
+	    if ($tempest >= $size ){
+	    return ('style="' . 'font-size: ' . "$font" . 'px;" ');
+	    }
+	}
 
 $long = get_field('name_filter_long');
 $font = get_field('name_filter_font');
@@ -45,7 +45,7 @@ $font = get_field('name_filter_font');
 	according to the principle of output from index blocks 1-4 -->
 
 				 <?php // project_type counter (copy page.php 49)
-				 // (thumbnail, medium, large, full or custom size)
+				 // 54 (thumbnail, medium, large, full or custom size)
                  $id_filter = get_field('filter_income');
                  foreach ($id_filter as $id ) {
                  	$image = get_field('projeсt_mini' , $id );

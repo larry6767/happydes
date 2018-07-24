@@ -16,7 +16,7 @@
 					<?php // custom header email
                     echo 'href="mailto:' , get_field('header_email','option') , '"' ; ?> class="ui-link ui-link--reverse header-top__contact"> <?php the_field('header_email','option'); ?>
                     </a>
-                    <div class="header-top__social-icons">z
+                    <div class="header-top__social-icons">
                         <a  href="<?php //custom header twitter link
                         the_field('header_twitter','option'); ?>"  class="header-top__social-icon header-top__social-icon--twitter">
                         </a>
@@ -26,24 +26,24 @@
                         <a href="<?php //custom header pinterest link
                         the_field('header_pinterest','option'); ?>" class="header-top__social-icon header-top__social-icon--pinterest">
                         </a>	
-						<?php
-						//if centred all icon 
-							// // hide of empty custom twitter, insta and facebook icon, with links 
-							// if (get_field('header_twitter','option')) 
-							// {
-							// 	echo '<a href="' . get_field('header_twitter','option') . '" class="header-top__social-icon header-top__social-icon--twitter"></a>'; 
-							// }
+								<?php
+								//if centred all icon 
+									// // hide of empty custom twitter, insta and facebook icon, with links 
+									// if (get_field('header_twitter','option')) 
+									// {
+									// 	echo '<a href="' . get_field('header_twitter','option') . '" class="header-top__social-icon header-top__social-icon--twitter"></a>'; 
+									// }
 
-							// if (get_field('header_instagram','option')) 
-							// {
-							// 	echo '<a href="' . get_field('header_instagram','option') . '" class="header-top__social-icon header-top__social-icon--instagram"></a>'; 
-							// }
+									// if (get_field('header_instagram','option')) 
+									// {
+									// 	echo '<a href="' . get_field('header_instagram','option') . '" class="header-top__social-icon header-top__social-icon--instagram"></a>'; 
+									// }
 
-							// if (get_field('header_pinterest','option')) 
-							// {
-							// 	echo '<a href="' . get_field('header_pinterest','option') . '" class="header-top__social-icon header-top__social-icon--pinterest"></a>'; 
-							// }
- 							?>
+									// if (get_field('header_pinterest','option')) 
+									// {
+									// 	echo '<a href="' . get_field('header_pinterest','option') . '" class="header-top__social-icon header-top__social-icon--pinterest"></a>'; 
+									// }
+		 							?>
                     </div>
                     <a 
                     <?php // custom header tel
