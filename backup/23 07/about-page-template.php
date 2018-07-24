@@ -30,18 +30,16 @@ get_header();
                 </div>
 
 				<div class="contact-item__social-icons">
-					<?php 
-							// hide of empty custom insta and facebook icon, with links 
-							if (get_field('about_instagram')) 
-							{
-								echo '<a href="' . get_field('about_instagram') . '" class="contact-item__social-icon contact-item__social-icon--instagram"></a>'; 
-							}
-
-							if (get_field('about_facebook')) 
-							{
-								echo '<a href="' . get_field('about_facebook') . '" class="contact-item__social-icon contact-item__social-icon--facebook"></a>'; 
-							}
-			                    ?>
+					<a href="
+						<?php //custom about instagram link
+	                    the_field('about_instagram'); ?>
+	                    "
+					class="contact-item__social-icon contact-item__social-icon--instagram"></a>
+		            <a href="
+			            <?php //custom about facebook link
+	                    the_field('about_facebook'); ?>
+	                    " 
+                    class="contact-item__social-icon contact-item__social-icon--facebook"></a>
 				</div>
 
 				<a 

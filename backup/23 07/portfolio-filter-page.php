@@ -11,8 +11,8 @@ function happ_font_reduction($t_string,$size,$font)
     $longestWordLength = 0;
     $longestWord = '';
         foreach ($words as $word){  
-            if ($longestWordLength < mb_strlen($word)) {
-                $longestWordLength = mb_strlen($word);
+            if ($longestWordLength < strlen($word)) {
+                $longestWordLength = strlen($word);
                 $longestWord = $word;
                 }
         }
@@ -23,8 +23,6 @@ function happ_font_reduction($t_string,$size,$font)
     }
 }
 
-$long = get_field('name_filter_long');
-$font = get_field('name_filter_font');
 ?>
 
 <div id="primary" class="content-area">
@@ -71,7 +69,7 @@ $font = get_field('name_filter_font');
 			                    	</div>
 
 			                    	<div class="catalog-item__cell catalog-item__cell--direction-column">
-					                        <div ' . (happ_font_reduction( (get_the_title($id)),$long,$font)) . 'class="catalog-item__title" >' . 
+					                        <div ' . (happ_font_reduction( (get_the_title($id)),15,14)) . 'class="catalog-item__title" >' . 
 					                        	(get_the_title($id)) .
 					                        '</div>
 					                        <div class="catalog-item__subtitle">' .

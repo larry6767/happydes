@@ -24,6 +24,48 @@
             "min": "",
             "max": "",
             "return_format": "id"
+        },
+        {
+            "key": "field_5b56e26ca76aa",
+            "label": "длинна символов фильтра длинных названий",
+            "name": "name_filter_long",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 15,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b56e2a8a76ab",
+            "label": "шрифт символов фильтра длинных названий",
+            "name": "name_filter_font",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -41,7 +83,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
         "the_content",
         "excerpt",
         "custom_fields",
@@ -51,6 +92,7 @@
         "slug",
         "author",
         "format",
+        "page_attributes",
         "featured_image",
         "categories",
         "tags",
@@ -58,5 +100,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531988428
+    "modified": 1532420802
 }
