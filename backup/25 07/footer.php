@@ -1,6 +1,6 @@
-</div><!-- #content -->
+<!-- </div>#content -->
 
-	        <footer class="footer">
+        <footer class="footer">
             <div class="ui-container">
                 <div class="footer__bar footer-bar">
                     
@@ -27,12 +27,12 @@
                     </div>
                 
                 </div>
-                
             </div>
         </footer>
-</div><!-- #page -->
-
+</body>
+<!-- </div>#page
+ -->
 <?php wp_footer(); ?>
 
-</body>
+
 </html>

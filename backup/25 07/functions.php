@@ -15,20 +15,43 @@ if( function_exists('acf_add_options_page') ) {
 } 
 
 
+// add_filter( 'wpcf7_form_elements', 'delicious_wpcf7_form_elements' );
+ 
+// function delicious_wpcf7_form_elements( $form ) {
+// $form = do_shortcode( $form );
+// return $form;
+// }
 
 
-//установка шаблоном по умолчанию шаблона добавления проекта
-function change_default_page_template() {
-    global $post;
-    if ( 'page' == $post->post_type 
-        && 0 != count( get_page_templates( $post ) ) 
-        && get_option( 'page_for_posts' ) != $post->ID // Not the page for listing posts
-        && '' == $post->page_template // Only when page_template is not set
-    ) {
-        $post->page_template = "project-page-tamplate.php";
-    }
-}
-add_action('add_meta_boxes', 'change_default_page_template', 1);
+
+//menu classes
+// function wph_css_class_to_menu($classes, $item){
+//     if( $item->title == "Главная" ){ 
+//         $classes[] = "menu-home";
+//     }
+//     if( $item->title == "Рубрики" ){ 
+//         $classes[] = "menu-categories";
+//     }
+//     return $classes;
+// }
+// add_filter('nav_menu_css_class' , 'wph_css_class_to_menu' , 10 , 2); 
+
+
+
+
+// function contact_form() {
+
+
+// 	if( is_page('Home')) {
+// 		wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
+
+// 		wp_enqueue_script('contact_form', THEME_DIR . '/js/contact_form.js');
+// 		}
+
+// }
+// add_action( 'wp_head', 'happ_setup' );
+
+
 
 
 
@@ -46,13 +69,10 @@ function happ_setup() {
 		) );
 
 		//компоненты, которые поддерживает тема
-		add_theme_support( 'html5', array(
-			//'search-form',
-			//'comment-form',
-			//'comment-list',
-			'gallery',
-			'caption',
-		) );
+		// add_theme_support( 'html5', array(
+		// 	'gallery',
+		// 	'caption',
+		// ) );
 	}
 add_action( 'after_setup_theme', 'happ_setup' );
 
@@ -67,6 +87,8 @@ function happ_scripts() {
 
 	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
 
+	// wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
+
 	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
 	wp_enqueue_script('slick.min', THEME_DIR . '/js/slick.min.js', array("jquery"), '', true);
@@ -79,29 +101,26 @@ function happ_scripts() {
 	wp_enqueue_script( 'happ-navigation', THEME_DIR . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'happ-skip-link-focus-fix', THEME_DIR . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'happ_scripts' );
 
 
 
-// function remove_admin_menu() {
-// 	remove_menu_page('options-general.php'); // Удаляем раздел Настройки	
-//   	remove_menu_page('tools.php'); // Инструменты
-// 	remove_menu_page('users.php'); // Пользователи
-// 	remove_menu_page('plugins.php'); // Плагины
-// 	remove_menu_page('themes.php'); // Внешний вид	
-// 	remove_menu_page('edit.php'); // Посты блога
-// 	remove_menu_page('upload.php'); // Медиабиблиотека
-// 	remove_menu_page('edit.php?post_type=page'); // Страницы
-// 	remove_menu_page('edit-comments.php'); // Комментарии	
-// 	remove_menu_page('link-manager.php'); // Ссылки
-//   	remove_menu_page('wpcf7');   // Contact form 7
-// 	remove_menu_page('options-framework'); // Cherry Framework
-// }
-// add_action('admin_menu', 'remove_admin_menu');
+function remove_admin_menu() {
+	// remove_menu_page('options-general.php'); // Удаляем раздел Настройки	
+  	remove_menu_page('tools.php'); // Инструменты
+	// remove_menu_page('users.php'); // Пользователи
+	// remove_menu_page('plugins.php'); // Плагины
+	// remove_menu_page('themes.php'); // Внешний вид	
+	remove_menu_page('edit.php'); // Посты блога
+	// remove_menu_page('upload.php'); // Медиабиблиотека
+	// remove_menu_page('edit.php?post_type=page'); // Страницы
+	remove_menu_page('edit-comments.php'); // Комментарии	
+	// remove_menu_page('link-manager.php'); // Ссылки
+  	// remove_menu_page('wpcf7');   // Contact form 7
+	// remove_menu_page('options-framework'); // Cherry Framework
+}
+add_action('admin_menu', 'remove_admin_menu');
+
+
+

@@ -8,7 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<!-- <div id="page" class="site"> -->
 	         <header class="header x-header">
 	            <div class="header-top">
                 <div class="ui-container header-top__wrapper">
@@ -25,7 +25,25 @@
                         </a>
                         <a href="<?php //custom header pinterest link
                         the_field('header_pinterest','option'); ?>" class="header-top__social-icon header-top__social-icon--pinterest">
-                        </a>
+                        </a>	
+								<?php
+								//if centred all icon 
+									// // hide of empty custom twitter, insta and facebook icon, with links 
+									// if (get_field('header_twitter','option')) 
+									// {
+									// 	echo '<a href="' . get_field('header_twitter','option') . '" class="header-top__social-icon header-top__social-icon--twitter"></a>'; 
+									// }
+
+									// if (get_field('header_instagram','option')) 
+									// {
+									// 	echo '<a href="' . get_field('header_instagram','option') . '" class="header-top__social-icon header-top__social-icon--instagram"></a>'; 
+									// }
+
+									// if (get_field('header_pinterest','option')) 
+									// {
+									// 	echo '<a href="' . get_field('header_pinterest','option') . '" class="header-top__social-icon header-top__social-icon--pinterest"></a>'; 
+									// }
+		 							?>
                     </div>
                     <a 
                     <?php // custom header tel
@@ -40,24 +58,11 @@
                         <div class="header-bottom__burger"></div>
                         <?php wp_nav_menu( array(
                         			'theme_location'  => 'Primary',
-									// 'menu'            => ' ',
-									// 'container'       => ' ', 
-									// 'container_class' => ' ',              
-									// 'container_id'    => ' ',
-									// 'container'       => 'div',
-								 	//    'container_class' => 'menu-{menu-slug}-container',
-									//    'container_id'    => '',              
+									'menu'            => 'Primary',
 									'menu_class'      => 'header-bottom__menu x-menu',          // (string) class самого меню (ul тега)
-									'menu_id'         => '',              // (string) id самого меню (ul тега)
 									'echo'            => true,            // (boolean) Выводить на экран или возвращать для обработки
-									'fallback_cb'     => 'wp_page_menu',  // (string) Используемая (резервная) функция, если меню не существует (не удалось получить)
-									'before'          => '',              // (string) Текст перед <a> каждой ссылки
-									'after'           => '',              // (string) Текст после </a> каждой ссылки
-									'link_before'     => '',              // (string) Текст перед анкором (текстом) ссылки
-									'link_after'      => '', 			  // (string) Текст после анкора (текста) ссылки
-									'items_wrap'      => '<ul id = "%1$s" class = "%2$s" >%3$s</ul>', 
 								) );
-								            ?>
+								       ?>
                        <!-- 
                             li class= header-bottom__menu-item 
                             подключен через панель визуального редактивания wordpress
@@ -202,4 +207,4 @@
             
         </header>
 
-	<div id="content" class="site-content">
+	<!-- <div id="content" class="site-content"> -->
