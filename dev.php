@@ -137,30 +137,14 @@
 </svg>
 					<div class="dev-page__subtitle">Сайт в разработке</div>
 					<div class="dev-page__text">
+						
 
 
 
+							<?php echo "Экранирование символов делается \"Так\" " . THEME_DIR;
 
 
-
-
-<div class="header-bottom__burger-menu x-burger-menu">
-                        <div class="header-bottom__burger"></div>
-			<?php
-
-			wp_nav_menu(array(
-                        			'theme_location'  => 'Primary',
-								
-								          
-									'menu_class'      => 'header-bottom__menu x-menu',          // (string) class самого меню (ul тега)
-									'echo'            => true,            // (boolean) Выводить на экран или возвращать для обработки
-									
-									
-									// 'items_wrap'      => '<div id = "%1$s" class = "%2$s" >%3$s</div>', 
-// header-bottom__menu-item ui-link ui-link--reverse
-
-								) ); ?>
-		            </div>
+							?>
 						В настоящее время мы улучшаем сайт<br>Оставайтесь с нами:</div>
 					<a href="mailto:inhappydes@gmail.com" class="ui-link ui-link--reverse dev-page__mail">inhappydes@gmail.com</a>
 					<a href="tel:79281028001" class="ui-link ui-link--reverse dev-page__phone">+7 (928) 102 80 01</a>

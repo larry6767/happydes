@@ -15,6 +15,45 @@ if( function_exists('acf_add_options_page') ) {
 } 
 
 
+// add_filter( 'wpcf7_form_elements', 'delicious_wpcf7_form_elements' );
+ 
+// function delicious_wpcf7_form_elements( $form ) {
+// $form = do_shortcode( $form );
+// return $form;
+// }
+
+
+
+//menu classes
+// function wph_css_class_to_menu($classes, $item){
+//     if( $item->title == "Главная" ){ 
+//         $classes[] = "menu-home";
+//     }
+//     if( $item->title == "Рубрики" ){ 
+//         $classes[] = "menu-categories";
+//     }
+//     return $classes;
+// }
+// add_filter('nav_menu_css_class' , 'wph_css_class_to_menu' , 10 , 2); 
+
+
+
+
+// function contact_form() {
+
+
+// 	if( is_page('Home')) {
+// 		wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
+
+// 		wp_enqueue_script('contact_form', THEME_DIR . '/js/contact_form.js');
+// 		}
+
+// }
+// add_action( 'wp_head', 'happ_setup' );
+
+
+
+
 
 function happ_setup() {
 		
@@ -30,13 +69,10 @@ function happ_setup() {
 		) );
 
 		//компоненты, которые поддерживает тема
-		add_theme_support( 'html5', array(
-			//'search-form',
-			//'comment-form',
-			//'comment-list',
-			'gallery',
-			'caption',
-		) );
+		// add_theme_support( 'html5', array(
+		// 	'gallery',
+		// 	'caption',
+		// ) );
 	}
 add_action( 'after_setup_theme', 'happ_setup' );
 
@@ -51,6 +87,8 @@ function happ_scripts() {
 
 	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
 
+	// wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
+
 	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
 	wp_enqueue_script('slick.min', THEME_DIR . '/js/slick.min.js', array("jquery"), '', true);
@@ -63,12 +101,6 @@ function happ_scripts() {
 	wp_enqueue_script( 'happ-navigation', THEME_DIR . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'happ-skip-link-focus-fix', THEME_DIR . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-
-
-	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	// 	wp_enqueue_script( 'comment-reply' );
-	// }
 }
 add_action( 'wp_enqueue_scripts', 'happ_scripts' );
 

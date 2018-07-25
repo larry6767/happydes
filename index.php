@@ -4,7 +4,31 @@
  */
 get_header();
 ?>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+            jQuery(document).ready(function($) {
+                $("#contact").submit(function() {
+                    var str = $(this).serialize();
+                    $.ajax({
+                        type: "POST",
+                        url: "<?php echo THEME_DIR;?>/contact_form_mail.php",      // здесь указываем путь ко второму файлу
+                        data: str,
+                        success: function(msg) {
+                            if(msg == 'OK') {
+                                result = '<div class="ok">Сообщение отправлено</div>';   // текст, если сообщение отправлено
+                                $("#fields").show();
+                            }
+                            else {result = msg;}
+                            $('#note').html(result);
+                            $('.input', '#contact')       // очищаем поля после того, как сообщение отправилось
+             .not(':button, :submit, :reset, :hidden')
+             .val('')            
+                        }
+                    });
+                    return false;
+                });
+            });
+    </script>
 	<div id="primary" class="content-area">
 	<main id="main" class="site-main">
     <div class="main">
@@ -315,25 +339,23 @@ get_header();
 			<div class="contact-form-block__subtittle">
 				Оставьте заявку на обратный звонок
 			</div>
-	
-			<form class="contact-form-block__form contact-form">
 
-                
+            <form id="contact" class="contact-form-block__form contact-form" action="<?php echo THEME_DIR;?>/contact_form_mail.php" method="post">
 
-            <?php 
-            // echo do_shortcode('[ninja_form id=2]'); 
-                ?>
 
-				<div class="contact-form__name-wrapper">
-					<input class="ui-input contact-form__name" type="text" placeholder="Ваше имя">
-				</div>
-	
-				<div class="contact-form__number-wrapper">
-					<input class="ui-input contact-form__number" type="tel" placeholder="+7 (___) ___-__-__">
-				</div>
-	
-				<div class="ui-button ui-button--gradient contact-form__button" data-text="Оставить заявку"></div>
-			</form>
+                <div class="contact-form__name-wrapper">
+                    <input name="name" class="input ui-input contact-form__name" type="text" placeholder="Ваше имя" required>
+                </div>
+
+                <div class="contact-form__number-wrapper">
+                    <input name="tel" class="input ui-input contact-form__number" type="tel" placeholder="+7 (___) ___-__-__" required>
+                </div>
+    
+                <button id="submitinput" type="submit" class="submit ui-button ui-button--gradient contact-form__button" data-text="Оставить заявку"></button>      
+
+            </form>
+              <div id="note" class="contact-form__button" >
+            </div>  
 		</div>
 	</div>
 	

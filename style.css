@@ -16,4 +16,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-@charset "UTF-8";
+/**/
+
+.ok {
+ padding: 10px;
+ text-align: center;
+}
