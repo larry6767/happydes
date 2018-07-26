@@ -8,7 +8,7 @@ if($post) {
 	if(!$tel) {$error .= 'Укажите ваш номер. ';}
 	if(!$error) {
 		$address = "modest.vlad@yandex.ru";    // ВНИМАНИЕ! Здесь указываем адрес электронной почты на которую будут приходить письма
-		$mes = "Имя: ".$name."\n\nТелефон: +7 " .$tel;
+		$mes = "Имя: ".$name."\n\nТелефон:" .$tel;
 		$send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = UTF-8\r\nFrom:$name");
 		if($send) {echo 'OK';}
 	}
