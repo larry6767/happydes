@@ -110,30 +110,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // portfolio page
-
-    var $catalogContext = $('.x-catalog');
-    var $catalogList = $('.x-catalog-list', $catalogContext)
-
-    $catalogList.css('height', $(document).height() - $('.x-header').height() - $('.x-footer').outerHeight() - 30);
-    var currentScroll = 0;
-    var maxScroll = $catalogList.prop('scrollHeight') - $catalogList.height();
-
-    $(window).on('wheel', function(e) {
-        if (currentScroll >= 0 && currentScroll <= maxScroll) {
-            currentScroll += e.originalEvent.deltaY;
-
-            if (currentScroll > maxScroll) {
-                currentScroll = maxScroll;
-            } else if (currentScroll < 0) {
-                currentScroll = 0;
-            }
-        }
-
-        $('.x-catalog-list').scrollTop(currentScroll);
-    });
-
-    // filter
+    // filter for portfolio-page
     var $filterButton = $('.x-filter-button', $catalogContext);
     var $filterButtonAll = $('.x-filter-button-all', $catalogContext);
     var filterButtonActiveClass = 'ui-custom-button--transparent-active';
@@ -184,9 +161,11 @@ jQuery(document).ready(function ($) {
             for (var i = 0; i < filterValues.length; i++) {
                 if (~type.indexOf(filterValues[i])) {
                     $(this).addClass(catalogItemActiveClass);
+
                     break;
                 } else {
                     $(this).removeClass(catalogItemActiveClass);
+
                 }
             }
 
@@ -199,7 +178,34 @@ jQuery(document).ready(function ($) {
 
         $('.' + catalogItemActiveClass).removeClass(marginClass);
         $('.' + catalogItemActiveClass).filter(function(index) {
-            return index % 3 === 2;
+            if ($(document).width() >= 1024) {
+                return index % 3 === 2;
+            } else {
+                return index % 2 === 1;
+            }
+
         }).addClass(marginClass);
     }
+
+    // scroll for portfolio-page
+    var $catalogContext = $('.x-catalog');
+    var $catalogList = $('.x-catalog-list', $catalogContext);
+
+    $catalogList.css('height', $(document).height() - $('.x-header').height() - $('.x-footer').outerHeight() - 30);
+    var currentScroll = 0;
+    var maxScroll = $catalogList.prop('scrollHeight') - $catalogList.height();
+
+    $(window).on('wheel', function(e) {
+        if (currentScroll >= 0 && currentScroll <= maxScroll) {
+            currentScroll += e.originalEvent.deltaY;
+
+            if (currentScroll > maxScroll) {
+                currentScroll = maxScroll;
+            } else if (currentScroll < 0) {
+                currentScroll = 0;
+            }
+        }
+
+        $catalogList.scrollTop(currentScroll);
+    });
 });
