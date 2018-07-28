@@ -1,9 +1,5 @@
-
-<div class="wrap_foooter_fix">
-    <div class="empty"></div>
-</div>
 <footer class="footer">
-            <div class="ui-container">
+            <div >
                 <div class="footer__bar footer-bar">
                     
                     <div class="footer-bar__column">
@@ -31,7 +27,6 @@
                 </div>
             </div>
         </footer>
-</div>
 </body>
 <?php wp_footer(); ?>
 

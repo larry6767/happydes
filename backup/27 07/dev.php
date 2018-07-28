@@ -1,3 +1,8 @@
+<?php
+/**
+	Template name: dev
+ */
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -7,37 +12,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
-	         <header class="header x-header">
-            <div class="header-top">
-                <div class="ui-container header-top__wrapper">
-                    <a href="mailto:inhappydes@gmail.com" class="ui-link ui-link--reverse header-top__contact">inhappydes@gmail.com</a>
-                    <div class="header-top__social-icons">
-                        <a class="header-top__social-icon header-top__social-icon--twitter"></a>
-                        <a class="header-top__social-icon header-top__social-icon--instagram"></a>
-                        <a class="header-top__social-icon header-top__social-icon--pinterest"></a>
-                    </div>
-                    <a href="tel:+79281028001" class="ui-link ui-link--reverse header-top__contact header-top__contact--phone">+7(928) 102 80 01</a>
-                </div>
-            </div>
-            
-            <div class="ui-container header-bottom">
-                <div class="header-bottom__block header-bottom__block--flex-start">
-                    <div class="header-bottom__burger-menu x-burger-menu">
-                        <div class="header-bottom__burger"></div>
-                        <ul class="header-bottom__menu x-menu">
-                            <li class="header-bottom__menu-item">Главная</li>
-                            <li class="header-bottom__menu-item">Портфолио</li>
-                            <li class="header-bottom__menu-item">Евгения Мельникова</li>
-                            <li class="header-bottom__menu-item">Максим Крутько</li>
-                            <li class="header-bottom__menu-item">Контакты</li>
-                        </ul>
-                    </div>
-                    <div class="header-bottom__text header-bottom__text--design">дизайн интерьеров</div>
-                </div>
-                <div class="header-bottom__block">
-                    <a class="header-bottom__logo">
-                        <svg version="1.1" id="&#x421;&#x43B;&#x43E;&#x439;_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 240.125 56.125" style="enable-background:new 0 0 240.125 56.125;" xml:space="preserve">
+<body <?php body_class(); ?>>
+<div id="page" class="site">
+        <main>
+			<div class="dev-page">
+				<div class="dev-page__inner">
+					<svg version="1.1" id="&#x421;&#x43B;&#x43E;&#x439;_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 240.125 56.125" style="enable-background:new 0 0 240.125 56.125;" xml:space="preserve" class="dev-page__logo">
 <g>
 	<g>
 		<g>
@@ -154,13 +134,23 @@
 		</g>
 	</g>
 </g>
-</svg></a>
-                    
-                </div>
-                <div class="header-bottom__block header-bottom__block--flex-end">
-                    <div class="header-bottom__text header-bottom__text--arch">архитектурное проектирование</div>
-                </div>
-            </div>
-            
-        </header>
+</svg>
+					<div class="dev-page__subtitle">Сайт в разработке</div>
+					<div class="dev-page__text">
+						
 
+
+
+							<?php echo "Экранирование символов делается \"Так\" " . THEME_DIR;
+
+
+							?>
+						В настоящее время мы улучшаем сайт<br>Оставайтесь с нами:</div>
+					<a href="mailto:inhappydes@gmail.com" class="ui-link ui-link--reverse dev-page__mail">inhappydes@gmail.com</a>
+					<a href="tel:79281028001" class="ui-link ui-link--reverse dev-page__phone">+7 (928) 102 80 01</a>
+					<a href="https://www.instagram.com/in_happydes" class="ui-button ui-button--gradient dev-page__inst" data-text="Мы в инстаграмме"></a>
+				</div>
+			</div>
+        </main>
+<?php
+get_footer();

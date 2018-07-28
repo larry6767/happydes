@@ -65,14 +65,15 @@ add_action( 'after_setup_theme', 'happ_setup' );
 
 
 function happ_scripts() {
-
 	wp_enqueue_style( 'happ-style', get_stylesheet_uri() );
-
-	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
 
 // custom connect______________
 		// font was connect in header.php,else if connects fonts here - when open in opera after 0,5 sec client seen, how changing fonts on header - seems like a shit
 		//wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic');
+
+	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
+
+	// wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
 
 	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
@@ -83,9 +84,9 @@ function happ_scripts() {
 	wp_enqueue_script('all.script', THEME_DIR . '/js/all.js', array("jquery"), '', true); 
 //___________________________
 
-	// wp_enqueue_script( 'happ-navigation', THEME_DIR . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'happ-navigation', THEME_DIR . '/js/navigation.js', array(), '20151215', true );
 
-	// wp_enqueue_script( 'happ-skip-link-focus-fix', THEME_DIR . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'happ-skip-link-focus-fix', THEME_DIR . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 }
 add_action( 'wp_enqueue_scripts', 'happ_scripts' );
 

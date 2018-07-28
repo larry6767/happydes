@@ -14,7 +14,9 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page('Header-Footer');	
 } 
 
-
+if(is_page_template('page.php')){
+	$post_parent = '79';
+}
 
 function happ_setup() {
 		

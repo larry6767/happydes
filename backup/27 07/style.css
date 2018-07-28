@@ -23,17 +23,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  text-align: center;
 }
 
-.wrap_foooter_fix {
-height:auto !important;
-height:100%;
-min-height:100%;
-position:relative;
-}
-.empty {
-height:500px; 
-}
+
 .footer {
-height:500px;
-margin-top:-100px;
-position:relative;
-}
+	padding: 500px;
+  flex: 0 0 auto;}

@@ -9,34 +9,56 @@
 
 <body>
 	         <header class="header x-header">
-            <div class="header-top">
-                <div class="ui-container header-top__wrapper">
-                    <a href="mailto:inhappydes@gmail.com" class="ui-link ui-link--reverse header-top__contact">inhappydes@gmail.com</a>
+	            <div class="header-top">
+                	<div class="ui-container header-top__wrapper">
+                    <a 
+					<?php // custom header email
+                    echo 'href="mailto:' , get_field('header_email','option') , '"' ; ?> class="ui-link ui-link--reverse header-top__contact"> <?php the_field('header_email','option'); ?>
+                    </a>
                     <div class="header-top__social-icons">
-                        <a class="header-top__social-icon header-top__social-icon--twitter"></a>
-                        <a class="header-top__social-icon header-top__social-icon--instagram"></a>
-                        <a class="header-top__social-icon header-top__social-icon--pinterest"></a>
+                        <a  href="<?php //custom header twitter link
+                        the_field('header_twitter','option'); ?>"  class="header-top__social-icon header-top__social-icon--twitter">
+                        </a>
+                        <a href="<?php //custom header instagram link
+                        the_field('header_instagram','option'); ?>" class="header-top__social-icon header-top__social-icon--instagram">
+                        </a>
+                        <a href="<?php //custom header pinterest link
+                        the_field('header_pinterest','option'); ?>" class="header-top__social-icon header-top__social-icon--pinterest">
+                        </a>	
                     </div>
-                    <a href="tel:+79281028001" class="ui-link ui-link--reverse header-top__contact header-top__contact--phone">+7(928) 102 80 01</a>
+                    <a 
+                    <?php // custom header tel
+					echo 'href="tel:+7' , get_field('header_tel','option') , '"'; ?> class="ui-link ui-link--reverse header-top__contact header-top__contact--phone">+7<?php 
+	                the_field('header_tel', 'option'); ?>
+                    </a>
                 </div>
             </div>
-            
             <div class="ui-container header-bottom">
                 <div class="header-bottom__block header-bottom__block--flex-start">
                     <div class="header-bottom__burger-menu x-burger-menu">
                         <div class="header-bottom__burger"></div>
-                        <ul class="header-bottom__menu x-menu">
-                            <li class="header-bottom__menu-item">Главная</li>
-                            <li class="header-bottom__menu-item">Портфолио</li>
-                            <li class="header-bottom__menu-item">Евгения Мельникова</li>
-                            <li class="header-bottom__menu-item">Максим Крутько</li>
-                            <li class="header-bottom__menu-item">Контакты</li>
-                        </ul>
+                        <?php 
+                        	wp_nav_menu( array(
+                        			'theme_location'  => 'Primary',
+									'menu'            => 'Primary',
+									'menu_class'      => 'header-bottom__menu x-menu',          // (string) class самого меню (ul тега)
+									'echo'            => true,            // (boolean) Выводить на экран или возвращать для обработки
+								) );
+								       ?>
+                       <!-- 
+                            li class= header-bottom__menu-item 
+                            подключен через панель визуального редактивания wordpress
+                            -->
                     </div>
-                    <div class="header-bottom__text header-bottom__text--design">дизайн интерьеров</div>
+                    <div class="header-bottom__text header-bottom__text--design">
+                    <?php // header left text custom
+                    the_field('header_text_left',"option"); ?>
+                    </div>
                 </div>
                 <div class="header-bottom__block">
-                    <a class="header-bottom__logo">
+                    <a class="header-bottom__logo" onclick="location.href=
+                            '<?php //custom home_photo2_link 
+                            get_option('home'); ?>/' ">
                         <svg version="1.1" id="&#x421;&#x43B;&#x43E;&#x439;_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 240.125 56.125" style="enable-background:new 0 0 240.125 56.125;" xml:space="preserve">
 <g>
 	<g>
@@ -158,7 +180,10 @@
                     
                 </div>
                 <div class="header-bottom__block header-bottom__block--flex-end">
-                    <div class="header-bottom__text header-bottom__text--arch">архитектурное проектирование</div>
+                    <div class="header-bottom__text header-bottom__text--arch">
+                    <?php // header right text custom
+                    the_field('header_text_right','option'); ?>
+                    </div>
                 </div>
             </div>
             
