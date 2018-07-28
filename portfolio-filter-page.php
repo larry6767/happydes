@@ -8,17 +8,17 @@ get_header();
 <div id="primary" class="content-area">
 <main id="main" class="site-main">
 <div class="main">
-	<div class="catalog">
+	<div class="catalog x-catalog">
 	    <div class="ui-container catalog__inner">
 	        <div class="catalog__filter catalog-filter">
 	            <div class="catalog-filter__title">Наши проекты</div>
-	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="все"></div>
-	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="архитектура"></div>
-	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="дизайн"></div>
-	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="декор"></div>
-	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="ландшафт"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent ui-custom-button--transparent-active catalog-filter__button x-filter-button-all" data-text="все"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button x-filter-button" data-text="архитектура"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button x-filter-button" data-text="дизайн"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button x-filter-button" data-text="декор"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button x-filter-button" data-text="ландшафт"></div>
 	        </div>
-	       <ul class="catalog__list catalog-list">
+	       <ul class="catalog__list catalog-list x-catalog-list">
 <!-- ___________________________________________________________page output cycle,
 	according to the principle of output from index blocks 1-4 -->
 
@@ -26,11 +26,19 @@ get_header();
                  $id_filter = get_field('filter_income');
                  foreach ($id_filter as $id ) {
                     echo '
-                    	<div class="catalog-list__item catalog-item" style="background-image: url( ' .
+                    	<div class="catalog-list__item catalog-item x-catalog-item" style="background-image: url( ' .
 	                        //custom projeсt1_mini_thumbnail
 		                        get_field('projeсt_mini' , $id) . ');" onclick="location.href= \' ' .
 	                        //custom projeсt1_link
-	                            get_page_link($id) . ' \' "> ' .
+	                            get_page_link($id) . ' \' "
+                                data-type="';
+
+                                $ptv = get_field('project_type', $id);
+                                 foreach ($ptv as $type_happ ) {
+                                echo $type_happ . ' ';
+                                }
+
+                                echo '"> ' .
 		                	'<div class="catalog-item__inner">
 	                 				<div class="catalog-item__cell">
 			                     			<div class="catalog-item__text"> ';

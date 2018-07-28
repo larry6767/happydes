@@ -68,12 +68,20 @@
         border: 2px solid $ui-white;
 
         &:hover {
-            background: $ui-white;
+            background: rgba(255, 255, 255, 0.5);
         }
 
         &::before {
             padding: 11px 23px 8px;
             background: transparent;
+        }
+
+        &-active {
+            background: $ui-white;
+
+            &:hover {
+                background: $ui-white;
+            }
         }
     }
 }
