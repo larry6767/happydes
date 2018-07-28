@@ -1,7 +1,9 @@
-jQuery(document).ready(function($){
-  //you can now use $ as your jQuery object.
-  var body = $( 'body' );
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
+    var body = $( 'body' );
+
+    $(window).on('wheel', function(e) {
+        // console.log(e);
+    });
     // for burger-menu
     $('.x-burger-menu').on('click', function() {
         $(this).toggleClass('header-bottom__burger-menu--active');
@@ -110,5 +112,4 @@ $(document).ready(function () {
             console.log(result); // пишем в консоль об ошибках
         }
     });
-});
 });
