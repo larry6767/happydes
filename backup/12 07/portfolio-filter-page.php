@@ -12,11 +12,11 @@ get_header();
 	    <div class="ui-container catalog__inner">
 	        <div class="catalog__filter catalog-filter">
 	            <div class="catalog-filter__title">Наши проекты</div>
-	            <div class="ui-button ui-button--transparent catalog-filter__button" data-text="все"></div>
-	            <div class="ui-button ui-button--transparent catalog-filter__button" data-text="архитектура"></div>
-	            <div class="ui-button ui-button--transparent catalog-filter__button" data-text="дизайн"></div>
-	            <div class="ui-button ui-button--transparent catalog-filter__button" data-text="декор"></div>
-	            <div class="ui-button ui-button--transparent catalog-filter__button" data-text="ландшафт"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="все"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="архитектура"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="дизайн"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="декор"></div>
+	            <div class="ui-custom-button ui-custom-button--transparent catalog-filter__button" data-text="ландшафт"></div>
 	        </div>
 	       <ul class="catalog__list catalog-list">
 	            <div class="catalog-list__item catalog-item">
@@ -202,7 +202,7 @@ get_header();
 	       </ul>
 	    </div>
 	</div>
-	
+
 </div>
 </main><!-- #main -->
 </div><!-- #primary -->

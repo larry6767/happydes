@@ -26,7 +26,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="first-screen__item first-screen-item first-screen-item--short" style="background-image: url('./img/photo-catalog-item.jpg');">
                     <div class="first-screen-item__inner">
                         <div class="first-screen-item__cell">
@@ -42,7 +42,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="first-screen__column">
                 <div class="first-screen__item first-screen-item first-screen-item" style="background-image: url('img/photo-catalog-item.jpg');">
@@ -60,7 +60,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="first-screen__item first-screen-item first-screen-item" style="background-image: url('img/photo-catalog-item.jpg');">
                     <div class="first-screen-item__inner">
                         <div class="first-screen-item__cell">
@@ -76,7 +76,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="first-screen__column">
                 <div class="first-screen__item first-screen-item first-screen-item--short" style="background-image: url('./img/photo-catalog-item.jpg');">
@@ -94,7 +94,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="first-screen__item first-screen-item first-screen-item--author" style="background-image: url('./img/evgenia_melnikova.jpg');">
                     <div class="first-screen-item__inner">
                         <div class="first-screen-item__cell"></div>
@@ -106,45 +106,45 @@ get_header();
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
 	<div class="features">
 		<div class="ui-container features__inner">
 			<div class="features__title">сферы нашей деятельности</div>
-	
+
 			<div class="features__list features-list">
-				<div class="features-list__item features-item">				
+				<div class="features-list__item features-item">
 					<div class="features-item__icon features-item__icon--architecture"></div>
 					<div class="features-item__title">архитектура</div>
 					<div class="features-item__text">проектирование жилых и общественных зданий</div>
 				</div>
-	
+
 				<div class="features-list__item features-item">
 					<div class="features-item__icon features-item__icon--design"></div>
 					<div class="features-item__title">дизайн</div>
 					<div class="features-item__text">разработка дизайна жилых и общественных зданий</div>
 				</div>
-	
+
 				<div class="features-list__item features-item">
 					<div class="features-item__icon features-item__icon--decor"></div>
 					<div class="features-item__title">декорирование</div>
 					<div class="features-item__text">подбор отделочных материалов, мебели и предметов интерьера</div>
 				</div>
-	
+
 				<div class="features-list__item features-item">
 					<div class="features-item__icon features-item__icon--landscape"></div>
 					<div class="features-item__title">ландшафт</div>
 					<div class="features-item__text">организация пространства, малые формы</div>
 				</div>
 			</div>
-	
-			<div class="ui-button ui-button--transparent features__button" data-text="смотреть проекты"></div>
+
+			<div class="ui-custom-button ui-custom-button--transparent features__button" data-text="смотреть проекты"></div>
 		</div>
 	</div>
-	
+
     <div class="about">
         <div class="ui-container about__inner">
             <div class="about__title">Почему выбирают нас?</div>
@@ -156,7 +156,7 @@ get_header();
                     <div class="about-block__text">
                         <span class="about-block__logo">Happy<span class="about-block__logo-bold">des</span></span> – это профессионалы, дипломированные специалисты в области архитектуры и дизайна интерьеровс опытом работы более 15 лет.
                     </div>
-    
+
                     <div class="about-block__reason">Максимально индивидуальный подход</div>
                     <div class="about-block__reason">Идеальные планировочные решения </div>
                     <div class="about-block__reason">Знание современных тенденций дизайна</div>
@@ -168,28 +168,28 @@ get_header();
             </div>
         </div>
     </div>
-    
+
 	<div class="features">
 		<div class="ui-container features__inner">
 			<div class="features__list features-list">
-				<div class="features-list__item features-item features-item--features">				
+				<div class="features-list__item features-item features-item--features">
 					<div class="features-item__icon features-item__icon--comfort"></div>
 					<div class="features-item__title">комфорт</div>
 					<div class="features-item__text features-item__text--features">грамотная организация планировки вашего пространства</div>
 				</div>
-	
+
 				<div class="features-list__item features-item features-item--features">
 					<div class="features-item__icon  features-item__icon--relevance"></div>
 					<div class="features-item__title">актуальность</div>
 					<div class="features-item__text features-item__text--features">гармония между функией и эстетикой дизайна</div>
 				</div>
-	
+
 				<div class="features-list__item features-item features-item--features">
 					<div class="features-item__icon features-item__icon--rent"></div>
 					<div class="features-item__title">рентабельность</div>
 					<div class="features-item__text features-item__text--features">продажа или сдача объекта станет более выгодной и легкой</div>
 				</div>
-	
+
 				<div class="features-list__item features-item features-item--features">
 					<div class="features-item__icon features-item__icon--saving"></div>
 					<div class="features-item__title">гарантия</div>
@@ -206,33 +206,33 @@ get_header();
 	        </ul>
 	    </div>
 	</div>
-	
+
 	<div class="contact-form-block">
-	
+
 		<div class="ui-container contact-form-block__inner">
 			<div class="contact-form-block__tittle">
 				Хотите заказать проект или сотрудничать с happydes?
 			</div>
-	
+
 			<div class="contact-form-block__subtittle">
 				Оставьте заявку на обратный звонок
 			</div>
-	
+
 			<form class="contact-form-block__form contact-form">
-	
+
 				<div class="contact-form__name-wrapper">
 					<input class="ui-input contact-form__name" type="text" placeholder="Ваше имя">
 				</div>
-	
+
 				<div class="contact-form__number-wrapper">
 					<input class="ui-input contact-form__number" type="tel" placeholder="+7 (___) ___-__-__">
 				</div>
-	
-				<div class="ui-button ui-button--gradient contact-form__button" data-text="Оставить заявку"></div>
+
+				<div class="ui-custom-button ui-custom-button--gradient contact-form__button" data-text="Оставить заявку"></div>
 			</form>
 		</div>
 	</div>
-	
+
 </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

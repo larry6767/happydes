@@ -100,7 +100,6 @@
     overflow-x: hidden;
     overflow-y: scroll;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 4px 0 0;
     margin: 0;
@@ -138,29 +137,29 @@
         background: $ui-dark-violet;
         width: 220px;
         margin-bottom: 25px;
+        margin-right: 25px;
 
         @include tablet {
             width: 240px;
             margin-bottom: 10px;
+            margin-right: 10px;
         }
 
         @include mobile {
             width: 100%;
             margin-bottom: 10px;
+            margin-right: 0;
         }
 
-        &:last-child,
-        &:nth-last-child(2),
-        &:nth-last-child(3) {
+        &:nth-child(3n) {
             @include desktop {
-                margin-bottom: 0;
+                margin-right: 0;
             }
         }
 
-        &:last-child,
-        &:nth-last-child(2) {
+        &:nth-child(2n) {
             @include tablet {
-                margin-bottom: 0;
+                margin-right: 0;
             }
         }
     }

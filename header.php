@@ -12,7 +12,7 @@
 	         <header class="header x-header">
 	            <div class="header-top">
                 <div class="ui-container header-top__wrapper">
-                    <a 
+                    <a
 					<?php // custom header email
                     echo 'href="mailto:' , get_field('header_email','option') , '"' ; ?> class="ui-link ui-link--reverse header-top__contact"> <?php the_field('header_email','option'); ?>
                     </a>
@@ -27,9 +27,9 @@
                         the_field('header_pinterest','option'); ?>" class="header-top__social-icon header-top__social-icon--pinterest">
                         </a>
                     </div>
-                    <a 
+                    <a
                     <?php // custom header tel
-					echo 'href="tel:+7' , get_field('header_tel','option') , '"'; ?> class="ui-link ui-link--reverse header-top__contact header-top__contact--phone">+7<?php 
+					echo 'href="tel:+7' , get_field('header_tel','option') , '"'; ?> class="ui-link ui-link--reverse header-top__contact header-top__contact--phone">+7<?php
 	                the_field('header_tel', 'option'); ?>
                     </a>
                 </div>
@@ -41,12 +41,12 @@
                         <?php wp_nav_menu( array(
                         			'theme_location'  => 'Primary',
 									// 'menu'            => ' ',
-									// 'container'       => ' ', 
-									// 'container_class' => ' ',              
+									// 'container'       => ' ',
+									// 'container_class' => ' ',
 									// 'container_id'    => ' ',
 									// 'container'       => 'div',
 								 	//    'container_class' => 'menu-{menu-slug}-container',
-									//    'container_id'    => '',              
+									//    'container_id'    => '',
 									'menu_class'      => 'header-bottom__menu x-menu',          // (string) class самого меню (ul тега)
 									'menu_id'         => '',              // (string) id самого меню (ul тега)
 									'echo'            => true,            // (boolean) Выводить на экран или возвращать для обработки
@@ -55,11 +55,11 @@
 									'after'           => '',              // (string) Текст после </a> каждой ссылки
 									'link_before'     => '',              // (string) Текст перед анкором (текстом) ссылки
 									'link_after'      => '', 			  // (string) Текст после анкора (текста) ссылки
-									'items_wrap'      => '<ul id = "%1$s" class = "%2$s" >%3$s</ul>', 
+									'items_wrap'      => '<div id = "%1$s" class = "%2$s" >%3$s</div>',
 								) );
 								            ?>
-                       <!-- 
-                            li class= header-bottom__menu-item 
+                       <!--
+                            li class= header-bottom__menu-item
                             подключен через панель визуального редактивания wordpress
                             -->
                     </div>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="header-bottom__block">
                     <a class="header-bottom__logo" onclick="location.href=
-                            '<?php //custom home_photo2_link 
+                            '<?php //custom home_photo2_link
                             get_option('home'); ?>/' ">
                         <svg version="1.1" id="&#x421;&#x43B;&#x43E;&#x439;_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 240.125 56.125" style="enable-background:new 0 0 240.125 56.125;" xml:space="preserve">
 <g>
@@ -190,7 +190,7 @@
 	</g>
 </g>
 </svg></a>
-                    
+
                 </div>
                 <div class="header-bottom__block header-bottom__block--flex-end">
                     <div class="header-bottom__text header-bottom__text--arch">
@@ -199,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </header>
 
 	<div id="content" class="site-content">

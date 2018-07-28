@@ -10,10 +10,10 @@ get_header();
  		 <div class="main">
 	<div class="resume-first-screen x-resume-first-screen">
 		<div class="ui-container resume-first-screen__inner">
-	
+
 			<div class="resume-first-screen__block contact-item x-contact-item">
-				<div class="contact-item__icon contact-item__icon--photo1" 
-					<?php 
+				<div class="contact-item__icon contact-item__icon--photo1"
+					<?php
 					//custom about photo
 	                echo ' style="background-image: url( ' , get_field('about_photo') , ' );" '; ?>
 	                >
@@ -21,12 +21,12 @@ get_header();
 
 			 	<div class="contact-item__title">
 					<?php // custom title(name)
-	                echo esc_html( get_the_title() ); ?> 
+	                echo esc_html( get_the_title() ); ?>
             	</div>
 
 				<div class="contact-item__text">
 					<?php //custom about profession
-	                the_field('about_profession'); ?>	
+	                the_field('about_profession'); ?>
                 </div>
 
 				<div class="contact-item__social-icons">
@@ -38,25 +38,25 @@ get_header();
 		            <a href="
 			            <?php //custom about facebook link
 	                    the_field('about_facebook'); ?>
-	                    " 
+	                    "
                     class="contact-item__social-icon contact-item__social-icon--facebook"></a>
 				</div>
 
-				<a 
+				<a
 					<?php // custom tel number link + echo
-					echo 'href="tel:+7' , get_field('about_tel') , '"'; ?> 
-					class="ui-link ui-link--reverse contact-item__number">+7<?php 
+					echo 'href="tel:+7' , get_field('about_tel') , '"'; ?>
+					class="ui-link ui-link--reverse contact-item__number">+7<?php
 	                the_field("about_tel"); ?>
                 </a>
 
-				<a 
+				<a
 					<?php // custom email link + echo
-					echo 'href="mailto:' , get_field('about_email') , '"' ; ?> 
-					class="ui-link ui-link--reverse contact-item__email"> 
+					echo 'href="mailto:' , get_field('about_email') , '"' ; ?>
+					class="ui-link ui-link--reverse contact-item__email">
 					<?php the_field('about_email'); ?>
 				</a>
 			</div>
-			
+
 			<div class="resume-first-screen__block">
 	            <div class="resume-text-block resume-text-block--fade x-text">
 	                <div class="resume-text-block__text1">
@@ -68,7 +68,7 @@ get_header();
 		                <?php // custom text 2 block
 	                	the_field('about_text2'); ?>
 	                </div>
-	
+
 	                <div class="resume-text-block__text3 text3-block">
 						<?php // custom text 3 block cloned
 						$rows = get_field('about_text3');
@@ -79,10 +79,10 @@ get_header();
 								echo '<div class="text3-block__item">' . '<div class="text3-block__year">' . $row['about_text3_year'] .  ' г.</div>' . '<div class="text3-block__text">' . $row['about_text3_text'] . '</div> </div>';
 							}
 						} ?>
-						
+
 					</div>
 	            </div>
-	            <div class="ui-button ui-button--gradient resume-text-block__button resume-text-block__button--more x-more-less" data-text="Читать дальше"></div>
+	            <div class="ui-custom-button ui-custom-button--gradient resume-text-block__button resume-text-block__button--more x-more-less" data-text="Читать дальше"></div>
 			</div>
 		</div>
 	</div>
@@ -110,7 +110,7 @@ get_header();
 			<?php endif; ?>
         </div>
     </div>
-    
+
     <div class="resume-publications">
         <div class="ui-container resume-publications__inner">
             <div class="resume-publications__title">Публикации</div>
@@ -130,9 +130,9 @@ get_header();
 			<?php endif; ?>
         </div>
     </div>
-    
+
 </div>
- 
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 

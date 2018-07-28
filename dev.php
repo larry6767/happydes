@@ -140,7 +140,7 @@
 						В настоящее время мы улучшаем сайт<br>Оставайтесь с нами:</div>
 					<a href="mailto:inhappydes@gmail.com" class="ui-link ui-link--reverse dev-page__mail">inhappydes@gmail.com</a>
 					<a href="tel:79281028001" class="ui-link ui-link--reverse dev-page__phone">+7 (928) 102 80 01</a>
-					<a href="https://www.instagram.com/in_happydes" class="ui-button ui-button--gradient dev-page__inst" data-text="Мы в инстаграмме"></a>
+					<a href="https://www.instagram.com/in_happydes" class="ui-custom-button ui-custom-button--gradient dev-page__inst" data-text="Мы в инстаграмме"></a>
 				</div>
 			</div>
         </main>
