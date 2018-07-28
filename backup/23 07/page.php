@@ -16,14 +16,19 @@ get_header();
  	<main id="main" class="site-main">
     	            <div class="main">
     <div class="project-slider">
-        <?php 
+        <?php
         //custom project slider
+<<<<<<< HEAD:backup/23 07/page.php
         $images = get_field('projeсt_slider');            
+=======
+
+                $images = get_field('projeсt_slider');
+>>>>>>> d43bfa8fdbba080cdcdc7c8800603d4919a1d6d9:backup/18 07/project-page-tamplate.php
         if( $images ): ?>
         <div class="ui-container project-slider__inner x-slider">
                         <?php foreach( $images as $image ): ?>
                             <div>
-                                <img src="<?php echo $image['sizes']['medium']; ?>" 
+                                <img src="<?php echo $image['sizes']['medium']; ?>"
                                 style="display: block; margin-left: auto; margin-right: auto"
                                 alt="<?php echo $image['alt']; ?>" />
                             </div>
@@ -31,30 +36,34 @@ get_header();
         </div>
         <?php endif;?>
     </div>
-    
+
     <div class="project-info x-project-info">
         <div class="ui-container project-info__inner">
             <div class="project-info__common-info project-common-info">
-                <div class="project-common-info__headline"> 
+                <div class="project-common-info__headline">
                     <?php //custom type project
                     //ptv= project type value 
                     $ptv = get_field("project_type");
+<<<<<<< HEAD:backup/23 07/page.php
                     foreach ($ptv as $type_happ ) {
                     	echo $type_happ . ' ';
                     	}
                     ?> 
+=======
+                    echo $ptv[0] . ' ' . $ptv[1] . ' ' . $ptv[2] . ' ' . $ptv[3]; ?>
+>>>>>>> d43bfa8fdbba080cdcdc7c8800603d4919a1d6d9:backup/18 07/project-page-tamplate.php
                 </div>
-                <div class="project-common-info__project-name"> 
+                <div class="project-common-info__project-name">
                     <?php //custom title-name of project
-                    echo esc_html( get_the_title() ); ?> 
+                    echo esc_html( get_the_title() ); ?>
                 </div>
                 <div class="project-common-info__title">Автор</div>
-                    <div class="project-common-info__text"> 
+                    <div class="project-common-info__text">
                     <?php //custom author project
-                    echo get_field("project_author"); ?> 
+                    echo get_field("project_author"); ?>
                 </div>
                 <div class="project-common-info__title">Площадь</div>
-                <div class="project-common-info__text"> 
+                <div class="project-common-info__text">
                     <?php //custom area project
                     echo get_field("project_area"); ?> М.КВ.
                 </div>
@@ -70,11 +79,11 @@ get_header();
                     <?php //custom description text project
                     echo get_field("project_text"); ?>
                 </div>
-                <div class="ui-button ui-button--gradient project-description__button project-description__button--more x-more-less" data-text="Читать дальше"></div>
+                <div class="ui-custom-button ui-custom-button--gradient project-description__button project-description__button--more x-more-less" data-text="Читать дальше"></div>
             </div>
         </div>
     </div>
-    
+
 </div>
 
 

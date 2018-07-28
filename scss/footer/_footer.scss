@@ -3,13 +3,16 @@
     background: $ui-white;
     font: 700 16px $Comfortaa;
     letter-spacing: 2px;
+    padding-bottom: 30px;
 
     @include tablet {
         font: 700 12px $Comfortaa;
+        padding-bottom: 20px;
     }
 
     @include mobile {
         font: 700 12px $Comfortaa;
+        padding-bottom: 15px;
     }
 
     &::before {
@@ -34,26 +37,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
 
     @include tablet {
         position: relative;
-        margin-bottom: 20px;
     }
 
     @include mobile {
         flex-direction: column;
-        margin-bottom: 15px;
     }
 
     &__column:not(:last-child) {
-        
+
         @include not-mobile {
             padding-right: 15px;
-        
+
             &::after {
                 content: '|';
-                margin-left: 15px; 
+                margin-left: 15px;
             }
         }
 
