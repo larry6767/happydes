@@ -5,7 +5,8 @@
 get_header();
 ?>
 
-<main>
+<div id="primary" class="content-area">
+ 	<main id="main" class="site-main">
     	<div class="main">
 			<div class="contact-list">
 				<div class="ui-container contact-list__inner">
@@ -25,18 +26,16 @@ get_header();
 		                	the_field('contacts_profession1'); ?>
 	                	</div>
 						<div class="contact-item__social-icons">
-							<?php 
-							// hide of empty custom insta and facebook icon, with links for 1 profile
-							if (get_field('contacts_instagram1')) 
-							{
-								echo '<a href="' . get_field('contacts_instagram1') . '" class="contact-item__social-icon contact-item__social-icon--instagram"></a>'; 
-							}
-
-							if (get_field('contacts_facebook1')) 
-							{
-								echo '<a href="' . get_field('contacts_facebook1') . '" class="contact-item__social-icon contact-item__social-icon--facebook"></a>'; 
-							}
-			                    ?>
+							<a href="
+								<?php //custom contacts_instagram1 link
+			                    the_field('contacts_instagram1'); ?>
+			                    "
+							class="contact-item__social-icon contact-item__social-icon--instagram"></a>
+				            <a href="
+								<?php //custom contacts_facebook1 link
+			                    the_field('contacts_facebook1'); ?>
+			                    " 
+			                    class="contact-item__social-icon contact-item__social-icon--facebook"></a>
 						</div>
 						<a 
 							<?php // custom contacts_tel1 link + echo
@@ -67,18 +66,11 @@ get_header();
 		                	the_field('contacts_profession2'); ?>
 	                	</div>
 						<div class="contact-item__social-icons">
-							<?php 
-							// hide of empty custom insta and facebook icon, with links for 2 profile
-							if (get_field('contacts_instagram2')) 
-							{
-								echo '<a href="' . get_field('contacts_instagram2') . '" class="contact-item__social-icon contact-item__social-icon--instagram"></a>'; 
-							}
-
-							if (get_field('contacts_facebook2')) 
-							{
-								echo '<a href="' . get_field('contacts_facebook2') . '" class="contact-item__social-icon contact-item__social-icon--facebook"></a>'; 
-							}
-			                    ?>
+				            <a href="
+								<?php //custom contacts_facebook2 link
+			                    the_field('contacts_facebook2'); ?>
+			                    "  
+			                    class="contact-item__social-icon contact-item__social-icon--facebook"></a>
 						</div>
 						<a
 							<?php // custom contacts_tel2 link + echo
@@ -96,6 +88,8 @@ get_header();
 				</div>
 			</div>
 		</div>
-	</main>
+	</main><!-- #main -->
+</div><!-- #primary -->
+
 <?php
 get_footer();

@@ -1,14 +1,7 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
+	Template name: project-page-tamplate
  */
-
 get_header();
 ?>
 
@@ -18,7 +11,8 @@ get_header();
     <div class="project-slider">
         <?php
         //custom project slider
-        $images = get_field('projeсt_slider');
+
+                $images = get_field('projeсt_slider');
         if( $images ): ?>
         <div class="ui-container project-slider__inner x-slider">
                         <?php foreach( $images as $image ): ?>
@@ -37,12 +31,8 @@ get_header();
             <div class="project-info__common-info project-common-info">
                 <div class="project-common-info__headline">
                     <?php //custom type project
-                    //ptv= project type value
                     $ptv = get_field("project_type");
-                    foreach ($ptv as $type_happ ) {
-                    	echo $type_happ . ' ';
-                    	}
-                    ?>
+                    echo $ptv[0] . ' ' . $ptv[1] . ' ' . $ptv[2] . ' ' . $ptv[3]; ?>
                 </div>
                 <div class="project-common-info__project-name">
                     <?php //custom title-name of project
@@ -59,8 +49,8 @@ get_header();
                     echo get_field("project_area"); ?> М.КВ.
                 </div>
                 <div class="project-common-info__title">Год</div>
-                <div class="project-common-info__text">
-                20<?php //custom year project
+                <div class="project-common-info__text">20
+                    <?php //custom year project
                     echo get_field("projeсt_year"); ?>
                 </div>
             </div>

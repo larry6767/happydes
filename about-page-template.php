@@ -5,14 +5,14 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
- 	<main id="main" class="site-main">
- 		 <div class="main">
-	<div class="resume-first-screen x-resume-first-screen">
-		<div class="ui-container resume-first-screen__inner">
+
+<main>
+ 	<div class="main">
+		<div class="resume-first-screen x-resume-first-screen">
+			<div class="ui-container resume-first-screen__inner">
 	
-			<div class="resume-first-screen__block contact-item x-contact-item">
-				<div class="contact-item__icon contact-item__icon--photo1" 
+				<div class="resume-first-screen__block contact-item x-contact-item">
+					<div class="contact-item__icon contact-item__icon--photo1" 
 					<?php 
 					//custom about photo
 	                echo ' style="background-image: url( ' , get_field('about_photo') , ' );" '; ?>
@@ -102,10 +102,6 @@ get_header();
 			        <?php foreach( $images as $image ): ?>
 			            <li class="certificates-list__item">
 			                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			                <!-- <a href="<?php echo $image['url']; ?>">
-			                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-			                </a> -->
 			            </li>
 			        <?php endforeach; ?>
 				</ul>
@@ -134,9 +130,7 @@ get_header();
     </div>
     
 </div>
- 
-	</main><!-- #main -->
-</div><!-- #primary -->
+</main>
 
 <?php
 get_footer();

@@ -16,6 +16,22 @@ if( function_exists('acf_add_options_page') ) {
 
 
 
+
+//установка шаблоном по умолчанию шаблона добавления проекта
+function change_default_page_template() {
+    global $post;
+    if ( 'page' == $post->post_type 
+        && 0 != count( get_page_templates( $post ) ) 
+        && get_option( 'page_for_posts' ) != $post->ID // Not the page for listing posts
+        && '' == $post->page_template // Only when page_template is not set
+    ) {
+        $post->page_template = "project-page-tamplate.php";
+    }
+}
+add_action('add_meta_boxes', 'change_default_page_template', 1);
+
+
+
 function happ_setup() {
 		
 		//автоустановка тега title на страницы
@@ -66,26 +82,26 @@ function happ_scripts() {
 
 
 
-	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	// 	wp_enqueue_script( 'comment-reply' );
-	// }
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'happ_scripts' );
 
 
 
-function remove_admin_menu() {
-	// remove_menu_page('options-general.php'); // Удаляем раздел Настройки	
-  	remove_menu_page('tools.php'); // Инструменты
-	// remove_menu_page('users.php'); // Пользователи
-	// remove_menu_page('plugins.php'); // Плагины
-	// remove_menu_page('themes.php'); // Внешний вид	
-	remove_menu_page('edit.php'); // Посты блога
-	// remove_menu_page('upload.php'); // Медиабиблиотека
-	// remove_menu_page('edit.php?post_type=page'); // Страницы
-	remove_menu_page('edit-comments.php'); // Комментарии	
-	// remove_menu_page('link-manager.php'); // Ссылки
-  	// remove_menu_page('wpcf7');   // Contact form 7
-	// remove_menu_page('options-framework'); // Cherry Framework
-}
-add_action('admin_menu', 'remove_admin_menu');
+// function remove_admin_menu() {
+// 	remove_menu_page('options-general.php'); // Удаляем раздел Настройки	
+//   	remove_menu_page('tools.php'); // Инструменты
+// 	remove_menu_page('users.php'); // Пользователи
+// 	remove_menu_page('plugins.php'); // Плагины
+// 	remove_menu_page('themes.php'); // Внешний вид	
+// 	remove_menu_page('edit.php'); // Посты блога
+// 	remove_menu_page('upload.php'); // Медиабиблиотека
+// 	remove_menu_page('edit.php?post_type=page'); // Страницы
+// 	remove_menu_page('edit-comments.php'); // Комментарии	
+// 	remove_menu_page('link-manager.php'); // Ссылки
+//   	remove_menu_page('wpcf7');   // Contact form 7
+// 	remove_menu_page('options-framework'); // Cherry Framework
+// }
+// add_action('admin_menu', 'remove_admin_menu');

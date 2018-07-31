@@ -1,9 +1,6 @@
 jQuery(document).ready(function ($) {
     var body = $( 'body' );
 
-    $(window).on('wheel', function(e) {
-        // console.log(e);
-    });
     // for burger-menu
     $('.x-burger-menu').on('click', function() {
         $(this).toggleClass('header-bottom__burger-menu--active');
@@ -111,5 +108,104 @@ jQuery(document).ready(function ($) {
         error: function(result){
             console.log(result); // пишем в консоль об ошибках
         }
+    });
+
+    // filter for portfolio-page
+    var $filterButton = $('.x-filter-button', $catalogContext);
+    var $filterButtonAll = $('.x-filter-button-all', $catalogContext);
+    var filterButtonActiveClass = 'ui-custom-button--transparent-active';
+    var $catalogItem = $('.x-catalog-item', $catalogContext);
+    var catalogItemActiveClass = 'catalog-list__item--active';
+
+    checkFilterValues();
+
+    $filterButtonAll.on('click', function() {
+        $(this).addClass(filterButtonActiveClass);
+        $filterButton.removeClass(filterButtonActiveClass);
+        checkFilterValues();
+    });
+
+    $filterButton.on('click', function() {
+        $(this).toggleClass(filterButtonActiveClass);
+        if ($filterButton.hasClass(filterButtonActiveClass)) {
+            $filterButtonAll.removeClass(filterButtonActiveClass);
+        } else {
+            $filterButtonAll.addClass(filterButtonActiveClass);
+        }
+        checkFilterValues();
+    });
+
+    function checkFilterValues() {
+        var filterValues = [];
+        if ($filterButtonAll.hasClass(filterButtonActiveClass)) {
+            filterValues.push($filterButtonAll.data('text'));
+        }
+
+        $filterButton.each(function() {
+            if ($(this).hasClass(filterButtonActiveClass)) {
+                filterValues.push($(this).data('text'));
+            }
+        });
+
+        if (filterValues[0] === 'все') {
+            $catalogItem.addClass(catalogItemActiveClass);
+            addMarginClass();
+            return;
+        } else {
+            $catalogItem.removeClass(catalogItemActiveClass);
+        }
+
+        $catalogItem.each(function() {
+            var type = $(this).data('type');
+
+            for (var i = 0; i < filterValues.length; i++) {
+                if (~type.indexOf(filterValues[i])) {
+                    $(this).addClass(catalogItemActiveClass);
+
+                    break;
+                } else {
+                    $(this).removeClass(catalogItemActiveClass);
+
+                }
+            }
+
+        });
+        addMarginClass();
+    }
+
+    function addMarginClass() {
+        var marginClass = 'catalog-list__item--mr0';
+
+        $('.' + catalogItemActiveClass).removeClass(marginClass);
+        $('.' + catalogItemActiveClass).filter(function(index) {
+            if ($(document).width() >= 1024) {
+                return index % 3 === 2;
+            } else {
+                return index % 2 === 1;
+            }
+
+        }).addClass(marginClass);
+    }
+
+    // scroll for portfolio-page
+    var $catalogContext = $('.x-catalog');
+    var $catalogList = $('.x-catalog-list', $catalogContext);
+
+    $catalogList.css('height', $(document).height() - $('.x-header').height() - $('.x-footer').outerHeight() - 30);
+    var currentScroll = 0;
+    var maxScroll = $catalogList.prop('scrollHeight') - $catalogList.height();
+
+    $(window).on('wheel', function(e) {
+        if (currentScroll >= 0 && currentScroll <= maxScroll) {
+            currentScroll += e.originalEvent.deltaY;
+
+            if (currentScroll > maxScroll) {
+                currentScroll = maxScroll;
+            } else if (currentScroll < 0) {
+                currentScroll = 0;
+            }
+        }
+
+        $catalogList.scrollTop(currentScroll);
     });
 });

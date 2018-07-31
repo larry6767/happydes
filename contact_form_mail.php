@@ -4,7 +4,7 @@ if($post) {
 	$name = $_POST['name'];
 	$tel = $_POST['tel'];
 	$error = '';
-	if(!$name) {$error .= 'Укажите свое имя. ';}
+	if(!$name) {$error .= 'Укажите ваше имя. ';}
 	if(!$tel) {$error .= 'Укажите ваш номер. ';}
 	if(!$error) {
 		$address = "modest.vlad@yandex.ru";    // ВНИМАНИЕ! Здесь указываем адрес электронной почты на которую будут приходить письма

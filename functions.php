@@ -15,31 +15,6 @@ if( function_exists('acf_add_options_page') ) {
 } 
 
 
-// function switch_page_template() {
-// global $post;
-// // Checks if current post type is a page, rather than a post
-// if (is_page()){
-// $ancestors = $post->ancestors;
-
-// if ($ancestors) {
-// $parent_page_template = get_post_meta(end($ancestors),'_wp_page_template',true);
-// $template = TEMPLATEPATH . "/{$parent_page_template}";
-// if (file_exists($template)) {
-// load_template($template);
-// exit;
-// }
-// } else {
-// return true;
-// }
-// }
-// }
-
-// add_action('template_redirect','switch_page_template');
-
-
-
-
-
 
 function happ_setup() {
 		
@@ -55,10 +30,13 @@ function happ_setup() {
 		) );
 
 		//компоненты, которые поддерживает тема
-		// add_theme_support( 'html5', array(
-		// 	'gallery',
-		// 	'caption',
-		// ) );
+		add_theme_support( 'html5', array(
+			//'search-form',
+			//'comment-form',
+			//'comment-list',
+			'gallery',
+			'caption',
+		) );
 	}
 add_action( 'after_setup_theme', 'happ_setup' );
 
@@ -71,9 +49,7 @@ function happ_scripts() {
 		// font was connect in header.php,else if connects fonts here - when open in opera after 0,5 sec client seen, how changing fonts on header - seems like a shit
 		//wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic');
 
-	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
-
-	// wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
+	wp_enqueue_style('all.min.css', THEME_DIR . '/css/all.min.css');
 
 	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
@@ -87,6 +63,12 @@ function happ_scripts() {
 	wp_enqueue_script( 'happ-navigation', THEME_DIR . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'happ-skip-link-focus-fix', THEME_DIR . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+
+
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'happ_scripts' );
 
@@ -107,6 +89,3 @@ function remove_admin_menu() {
 	// remove_menu_page('options-framework'); // Cherry Framework
 }
 add_action('admin_menu', 'remove_admin_menu');
-
-
-
