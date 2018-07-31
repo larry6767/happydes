@@ -1,6 +1,4 @@
-</div><!-- #content -->
-
-	        <footer class="footer x-footer">
+<footer class="footer x-footer">
             <div class="ui-container">
                 <div class="footer__bar footer-bar">
 
@@ -25,14 +23,10 @@
                         the_field('header_copyright','option') ?>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </footer>
-</div><!-- #page -->
-
+        
 <?php wp_footer(); ?>
-
 </body>
 </html>

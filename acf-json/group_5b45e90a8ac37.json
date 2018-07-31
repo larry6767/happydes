@@ -155,8 +155,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "thumbnail",
+            "return_format": "array",
+            "preview_size": "full",
             "library": "uploadedTo",
             "min_width": "",
             "min_height": "",
@@ -191,11 +191,12 @@
         "slug",
         "author",
         "format",
+        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1531991455
+    "modified": 1532959945
 }

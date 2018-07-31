@@ -3,10 +3,31 @@
 	Template name: portfolio-filter-page
  */
 get_header();
-?>
 
-<div id="primary" class="content-area">
-<main id="main" class="site-main">
+function happ_font_reduction($t_string,$size,$font)
+		{
+
+		    $words  = explode(' ', ($t_string));
+		    $longestWordLength = 0;
+		    $longestWord = '';
+		        foreach ($words as $word){
+		            if ($longestWordLength < mb_strlen($word)) {
+		                $longestWordLength = mb_strlen($word);
+		                $longestWord = $word;
+		                }
+		        }
+		    $tempest = mb_strlen($longestWord);
+
+		    if ($tempest >= $size ){
+		    return ('style="' . 'font-size: ' . "$font" . 'px;" ');
+		    }
+		}
+
+	$long = get_field('name_filter_long');
+	$font = get_field('name_filter_font');
+	?>
+
+<main>
 <div class="main">
 	<div class="catalog x-catalog">
 	    <div class="ui-container catalog__inner">
@@ -23,20 +44,22 @@ get_header();
 	according to the principle of output from index blocks 1-4 -->
 
 				 <?php // project_type counter (copy page.php 49)
+				  // 54 (thumbnail, medium, large, full or custom size)
                  $id_filter = get_field('filter_income');
                  foreach ($id_filter as $id ) {
+                 	$image = get_field('projeсt_mini' , $id );
                     echo '
                     	<div class="catalog-list__item catalog-item x-catalog-item" style="background-image: url( ' .
 	                        //custom projeсt1_mini_thumbnail
-		                        get_field('projeсt_mini' , $id) . ');" onclick="location.href= \' ' .
+		                	$image['sizes']['medium'] . ');" onclick="location.href= \' ' .
 	                        //custom projeсt1_link
 	                            get_page_link($id) . ' \' "
                                 data-type="';
-
-                                $ptv = get_field('project_type', $id);
-                                 foreach ($ptv as $type_happ ) {
-                                echo $type_happ . ' ';
-                                }
+		                                // project_type counter  for js filter
+		                                $ptv = get_field('project_type', $id);
+		                                 foreach ($ptv as $type_happ ) {
+		                                echo $type_happ . ' ';
+		                                }
 
                                 echo '"> ' .
 		                	'<div class="catalog-item__inner">
@@ -57,7 +80,7 @@ get_header();
 			                    	</div>
 
 			                    	<div class="catalog-item__cell catalog-item__cell--direction-column">
-					                        <div class="catalog-item__title">' .
+					                        <div ' . (happ_font_reduction( (get_the_title($id)),$long,$font)) . 'class="catalog-item__title">' .
 					                        	(get_the_title($id)) .
 					                        '</div>
 					                        <div class="catalog-item__subtitle">' .
@@ -80,8 +103,6 @@ get_header();
 	</div>
 
 </div>
-</main><!-- #main -->
-</div><!-- #primary -->
-
+</main>
 <?php
 get_footer();

@@ -49,7 +49,7 @@ function happ_scripts() {
 		// font was connect in header.php,else if connects fonts here - when open in opera after 0,5 sec client seen, how changing fonts on header - seems like a shit
 		//wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic');
 
-	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
+	wp_enqueue_style('all.min.css', THEME_DIR . '/css/all.min.css');
 
 	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
