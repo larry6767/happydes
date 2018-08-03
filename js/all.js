@@ -1,6 +1,9 @@
 jQuery(document).ready(function ($) {
     var body = $( 'body' );
 
+    $('.main').css('margin-top', $('.x-header').height());
+    $('.main').css('min-height', 'calc(100vh - ' + ($('.x-header').height() + $('.x-footer').height()) + ')');
+
     // for burger-menu
     $('.x-burger-menu').on('click', function() {
         $(this).toggleClass('header-bottom__burger-menu--active');
@@ -23,7 +26,15 @@ jQuery(document).ready(function ($) {
         arrow: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        swipeToSlide: 1
+        swipeToSlide: 1,
+        responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }],
     });
 
     $('.x-resume-slider').slick({
@@ -36,7 +47,15 @@ jQuery(document).ready(function ($) {
         arrow: false,
         slidesToShow: 4,
         slidesToScroll: 4,
-        swipeToSlide: 1
+        swipeToSlide: 1,
+        responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }],
     });
 
     // for less-more (project-page)

@@ -3,6 +3,9 @@
     padding-bottom: 80px;
 
     @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-size: cover;
         background-position: center;
         background-image: url('../img/photo-catalog-item.jpg');

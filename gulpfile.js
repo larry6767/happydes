@@ -49,6 +49,7 @@ gulp.task('style', function () {
             path.extname = ".min.css"
         }))
         // .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('css'))
         .pipe(gulp.dest('build/css'))
         .pipe(server.reload({ stream: true }));
 });

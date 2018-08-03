@@ -20,6 +20,10 @@
 
 	.contact-item {
 		margin-right: 60px;
+
+        @include mobile {
+            margin-right: 0;
+        }
 	}
 }
 
