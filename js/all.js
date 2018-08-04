@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
     var body = $( 'body' );
 
     $('.main').css('margin-top', $('.x-header').height());
-    $('.main').css('min-height', 'calc(100vh - ' + ($('.x-header').height() + $('.x-footer').height()) + ')');
+    $('.main').css('min-height', 'calc(100vh - ' + ($('.x-header').height() + $('.x-footer').height() + 30) + 'px)');
 
     // for burger-menu
     $('.x-burger-menu').on('click', function() {
