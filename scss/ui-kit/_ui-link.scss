@@ -48,6 +48,7 @@ a:not(.ui-custom-button):active,
     }
 
     &.ui-link--spy {
+        outline: none;
         text-decoration: none;
 
         &:hover {
