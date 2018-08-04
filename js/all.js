@@ -16,6 +16,35 @@ jQuery(document).ready(function ($) {
 
     // for slider
 
+    $('.x-front-page-slider').each(function() {
+        $('.x-front-page-slider-item', $(this)).each(function(i) {
+            if (i !== 0) {
+                $(this).css('display', 'none');
+            }
+        });
+    });
+
+    $('.x-front-page-slider').each(function(i) {
+        var $this = $(this);
+
+        setTimeout(function() {
+            $this.slick({
+                infinite: true,
+                autoplay: true,
+                speed: 1000,
+                variableWidth: false,
+                draggable: true,
+                useCSS: true,
+                dots: false,
+                arrow: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+            $('.x-front-page-slider-item', $this).css('display', 'block');
+        }, 1000 * i);
+    });
+
     $('.x-slider').slick({
         infinite: true,
         speed: 300,
