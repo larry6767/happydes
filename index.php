@@ -40,7 +40,7 @@ get_header();
                 <div class="first-screen__mobile-title"><?php // header left text custom
                     the_field('header_text_left',"option"); ?>.</div>
             </div>
-            <div class="first-screen__column">
+        <div class="first-screen__column">
                 <div class="first-screen__item first-screen-item first-screen-item--author"
                      style="background-image: url(
                         <?php //custom home_photo1
@@ -63,229 +63,198 @@ get_header();
 <!-- _________________________________________________________________________________add custom project connect 1 START -->
                     <?php //get project1 id
                     $home_project1_id = (get_field('home_project_1')); ?>
+
             <div class="x-front-page-slider">
-                <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" style="background-image: url(
-                            <?php //custom projeсt1_mini_thumbnail
-                            echo (get_field('projeсt_mini' , $home_project1_id))['url']; ?> );"
-                        onclick="location.href=
+            <?php
+                    //custom project slider
+                    $images = get_field('projeсt_slider_home', $home_project1_id );
+
+                         foreach( $images as $image ): ?>
+                            <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" 
+                            style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
+                            onclick="location.href=
                             '<?php //custom projeсt1_link
                             echo get_page_link($home_project1_id); ?> ' ">
-                    <div class="first-screen-item__inner">
+                            
+<!-- ___________________________________clonen nonchanged code start  -->
+                            <div class="first-screen-item__inner">
 
-                        <div class="first-screen-item__cell">
-                            <div class="first-screen-item__text">
-                                 <?php // project_type counter (copy page.php 49)
-                                 $ptv = get_field('project_type', $home_project1_id);
-                                 foreach ($ptv as $type_happ ) {
-                                    echo $type_happ . ' ';
-                                    } ?>
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">
+                                         <?php // project_type counter (copy page.php 49)
+                                         $ptv = get_field('project_type', $home_project1_id);
+                                         foreach ($ptv as $type_happ ) {
+                                            echo $type_happ . ' ';
+                                            } ?>
+                                    </div>
+                                    <div class="first-screen-item__text">
+                                         20<?php the_field('projeсt_year', $home_project1_id);?>
+                                    </div>
+                                </div>
+                                <div class="first-screen-item__cell first-screen-item__cell--direction-column">
+                                    <div class="first-screen-item__title">
+                                        <?php echo get_the_title($home_project1_id);?>
+                                    </div>
+                                    <div class="first-screen-item__subtitle">
+                                        <?php the_field('project_author', $home_project1_id);?>
+                                    </div>
+                                </div>
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">Смотреть »</div>
+                                </div>
                             </div>
-                            <div class="first-screen-item__text">
-                                 20<?php the_field('projeсt_year', $home_project1_id);?>
-                            </div>
+<!-- ___________________________________clonen nonchanged code end  -->
                         </div>
-                        <div class="first-screen-item__cell first-screen-item__cell--direction-column">
-                            <div class="first-screen-item__title">
-                                <?php echo get_the_title($home_project1_id);?>
-                            </div>
-                            <div class="first-screen-item__subtitle">
-                                <?php the_field('project_author', $home_project1_id);?>
-                            </div>
-                        </div>
-                        <div class="first-screen-item__cell">
-                            <div class="first-screen-item__text">Смотреть »</div>
-                        </div>
-                    </div>
-                </div>
-
-                        <?php //get project4 id
-                        $home_project4_id = (get_field('home_project_4')); ?>
-                <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" style="background-image: url(
-                            <?php //custom projeсt4_mini_thumbnail
-                            echo (get_field('projeсt_mini' , $home_project4_id))['url']; ?> );"onclick="location.href=
-                            '<?php //custom projeсt4_link
-                            echo get_page_link($home_project4_id); ?> ' ">
-                    <div class="first-screen-item__inner">
-                        <div class="first-screen-item__cell">
-                            <div class="first-screen-item__text">
-                                 <?php // project_type counter (copy page.php 49)
-                                 $ptv = get_field('project_type', $home_project4_id);
-                                 foreach ($ptv as $type_happ ) {
-                                    echo $type_happ . ' ';
-                                    } ?>
-                            </div>
-                            <div class="first-screen-item__text">
-                                 20<?php the_field('projeсt_year', $home_project4_id);?>
-                            </div>
-                        </div>
-                        <div class="first-screen-item__cell first-screen-item__cell--direction-column">
-                            <div class="first-screen-item__title">
-                                <?php echo get_the_title($home_project4_id);?>
-                            </div>
-                            <div class="first-screen-item__subtitle">
-                                <?php the_field('project_author', $home_project4_id);?>
-                            </div>
-                        </div>
-                        <div class="first-screen-item__cell">
-                            <div class="first-screen-item__text">Смотреть »</div>
-                        </div>
-                    </div>
-                </div>
+                         <?php endforeach; ?>
             </div>
+
+        </div>
+        <div class="first-screen__column"> 
 <!-- _________________________________________________________________________________add custom project connect 2-->
-            </div>
-                            <?php //get project2 id
-                            $home_project2_id = (get_field('home_project_2')); ?>
-            <div class="first-screen__column">
+                                <?php //get project2 id
+                    $home_project2_id = (get_field('home_project_2')); ?>
 
-                <div class="x-front-page-slider">
-                    <div class="first-screen__item first-screen-item first-screen-item x-front-page-slider-item" style="background-image: url(
-                                 <?php //custom projeсt2_mini_thumbnail
-                                echo (get_field('projeсt_mini' , $home_project2_id))['url']; ?> );"
-                                onclick="location.href=
-                                '<?php //custom projeсt1_link
-                                echo get_page_link($home_project1_id); ?> ' ">
-                        <div class="first-screen-item__inner">
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">
-                                    <?php // project_type counter (copy page.php 49)
-                                     $ptv = get_field('project_type', $home_project2_id);
-                                     foreach ($ptv as $type_happ ) {
-                                        echo $type_happ . ' ';
-                                        } ?>
+            <div class="x-front-page-slider">
+            <?php
+                    //custom project slider
+                    $images = get_field('projeсt_slider_home', $home_project2_id );
+
+                         foreach( $images as $image ): ?>
+                            <div class="first-screen__item first-screen-item x-front-page-slider-item" 
+                            style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
+                            onclick="location.href=
+                            '<?php //custom projeсt1_link
+                            echo get_page_link($home_project2_id); ?> ' ">
+                            
+<!-- ___________________________________clonen nonchanged code start  -->
+                            <div class="first-screen-item__inner">
+
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">
+                                         <?php // project_type counter (copy page.php 49)
+                                         $ptv = get_field('project_type', $home_project2_id);
+                                         foreach ($ptv as $type_happ ) {
+                                            echo $type_happ . ' ';
+                                            } ?>
+                                    </div>
+                                    <div class="first-screen-item__text">
+                                         20<?php the_field('projeсt_year', $home_project2_id);?>
+                                    </div>
                                 </div>
-                                <div class="first-screen-item__text">
-                                     20<?php the_field('projeсt_year', $home_project2_id);?>
+                                <div class="first-screen-item__cell first-screen-item__cell--direction-column">
+                                    <div class="first-screen-item__title">
+                                        <?php echo get_the_title($home_project2_id);?>
+                                    </div>
+                                    <div class="first-screen-item__subtitle">
+                                        <?php the_field('project_author', $home_project2_id);?>
+                                    </div>
+                                </div>
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">Смотреть »</div>
                                 </div>
                             </div>
-                            <div class="first-screen-item__cell first-screen-item__cell--direction-column">
-                                <div class="first-screen-item__title">
-                                    <?php echo get_the_title($home_project2_id);?>
-                                </div>
-                                <div class="first-screen-item__subtitle">
-                                    <?php the_field('project_author', $home_project2_id);?>
-                               </div>
-                            </div>
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">Смотреть »</div>
-                            </div>
+<!-- ___________________________________clonen nonchanged code end  -->
                         </div>
-                    </div>
-
-                        <?php //get project3 id
-                        $home_project3_id = (get_field('home_project_3')); ?>
-
-                    <div class="first-screen__item first-screen-item first-screen-item x-front-page-slider-item" style="background-image: url(
-                                <?php //custom projeсt3_mini_thumbnail
-                                echo (get_field('projeсt_mini' , $home_project3_id))['url']; ?> );"
-                                onclick="location.href=
-                                '<?php //custom projeсt3_link
-                                echo get_page_link($home_project3_id); ?> ' ">
-                        <div class="first-screen-item__inner">
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">
-                                     <?php // project_type counter (copy page.php 49)
-                                     $ptv = get_field('project_type', $home_project3_id);
-                                     foreach ($ptv as $type_happ ) {
-                                        echo $type_happ . ' ';
-                                        } ?>
-                                </div>
-                                <div class="first-screen-item__text">
-                                     20<?php the_field('projeсt_year', $home_project3_id);?>
-                                </div>
-                            </div>
-                            <div class="first-screen-item__cell first-screen-item__cell--direction-column">
-                                <div class="first-screen-item__title">
-                                    <?php echo get_the_title($home_project3_id);?>
-                               </div>
-                                <div class="first-screen-item__subtitle">
-                                    <?php the_field('project_author', $home_project3_id);?>
-                                </div>
-                            </div>
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">Смотреть »</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                         <?php endforeach; ?>
+ </div>
 <!-- _________________________________________________________________________________add custom project connect 3-->
-                    <?php //get project3 id
+                           <?php //get project3 id
                     $home_project3_id = (get_field('home_project_3')); ?>
 
-                <div class="x-front-page-slider">
-                    <div class="first-screen__item first-screen-item first-screen-item x-front-page-slider" style="background-image: url(
-                                <?php //custom projeсt3_mini_thumbnail
-                                echo (get_field('projeсt_mini' , $home_project3_id))['url']; ?> );"
-                                onclick="location.href=
-                                '<?php //custom projeсt3_link
-                                echo get_page_link($home_project3_id); ?> ' ">
-                        <div class="first-screen-item__inner">
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">
-                                     <?php // project_type counter (copy page.php 49)
-                                     $ptv = get_field('project_type', $home_project3_id);
-                                     foreach ($ptv as $type_happ ) {
-                                        echo $type_happ . ' ';
-                                        } ?>
-                                </div>
-                                <div class="first-screen-item__text">
-                                     20<?php the_field('projeсt_year', $home_project3_id);?>
-                                </div>
-                            </div>
-                            <div class="first-screen-item__cell first-screen-item__cell--direction-column">
-                                <div class="first-screen-item__title">
-                                    <?php echo get_the_title($home_project3_id);?>
-                               </div>
-                                <div class="first-screen-item__subtitle">
-                                    <?php the_field('project_author', $home_project3_id);?>
-                                </div>
-                            </div>
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">Смотреть »</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="x-front-page-slider">
+            <?php
+                    //custom project slider
+                    $images = get_field('projeсt_slider_home', $home_project3_id );
 
-            </div>
-            <div class="first-screen__column">
+                         foreach( $images as $image ): ?>
+                            <div class="first-screen__item first-screen-item x-front-page-slider-item" 
+                            style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
+                            onclick="location.href=
+                            '<?php //custom projeсt1_link
+                            echo get_page_link($home_project3_id); ?> ' ">
+                            
+<!-- ___________________________________clonen nonchanged code start  -->
+                            <div class="first-screen-item__inner">
+
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">
+                                         <?php // project_type counter (copy page.php 49)
+                                         $ptv = get_field('project_type', $home_project3_id);
+                                         foreach ($ptv as $type_happ ) {
+                                            echo $type_happ . ' ';
+                                            } ?>
+                                    </div>
+                                    <div class="first-screen-item__text">
+                                         20<?php the_field('projeсt_year', $home_project3_id);?>
+                                    </div>
+                                </div>
+                                <div class="first-screen-item__cell first-screen-item__cell--direction-column">
+                                    <div class="first-screen-item__title">
+                                        <?php echo get_the_title($home_project3_id);?>
+                                    </div>
+                                    <div class="first-screen-item__subtitle">
+                                        <?php the_field('project_author', $home_project3_id);?>
+                                    </div>
+                                </div>
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">Смотреть »</div>
+                                </div>
+                            </div>
+<!-- ___________________________________clonen nonchanged code end  -->
+                        </div>
+                         <?php endforeach; ?>
+                    </div>
+        </div>
+            
 <!-- _________________________________________________________________________________add custom project connect 4-->
-                        <?php //get project4 id
-                        $home_project4_id = (get_field('home_project_4')); ?>
+        <div class="first-screen__column">
 
-                <div class="x-front-page-slider">
-                    <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" style="background-image: url(
-                                <?php //custom projeсt4_mini_thumbnail
-                                echo (get_field('projeсt_mini' , $home_project4_id))['url']; ?> );"onclick="location.href=
-                                '<?php //custom projeсt4_link
-                                echo get_page_link($home_project4_id); ?> ' ">
-                        <div class="first-screen-item__inner">
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">
-                                     <?php // project_type counter (copy page.php 49)
-                                     $ptv = get_field('project_type', $home_project4_id);
-                                     foreach ($ptv as $type_happ ) {
-                                        echo $type_happ . ' ';
-                                        } ?>
+                      <?php //get project4 id
+                    $home_project4_id = (get_field('home_project_4')); ?>
+
+            <div class="x-front-page-slider">
+            <?php
+                    //custom project slider
+                    $images = get_field('projeсt_slider_home', $home_project4_id );
+
+                         foreach( $images as $image ): ?>
+                            <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" 
+                            style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
+                            onclick="location.href=
+                            '<?php //custom projeсt1_link
+                            echo get_page_link($home_project4_id); ?> ' ">
+                            
+<!-- ___________________________________clonen nonchanged code start  -->
+                            <div class="first-screen-item__inner">
+
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">
+                                         <?php // project_type counter (copy page.php 49)
+                                         $ptv = get_field('project_type', $home_project4_id);
+                                         foreach ($ptv as $type_happ ) {
+                                            echo $type_happ . ' ';
+                                            } ?>
+                                    </div>
+                                    <div class="first-screen-item__text">
+                                         20<?php the_field('projeсt_year', $home_project4_id);?>
+                                    </div>
                                 </div>
-                                <div class="first-screen-item__text">
-                                     20<?php the_field('projeсt_year', $home_project4_id);?>
+                                <div class="first-screen-item__cell first-screen-item__cell--direction-column">
+                                    <div class="first-screen-item__title">
+                                        <?php echo get_the_title($home_project4_id);?>
+                                    </div>
+                                    <div class="first-screen-item__subtitle">
+                                        <?php the_field('project_author', $home_project4_id);?>
+                                    </div>
+                                </div>
+                                <div class="first-screen-item__cell">
+                                    <div class="first-screen-item__text">Смотреть »</div>
                                 </div>
                             </div>
-                            <div class="first-screen-item__cell first-screen-item__cell--direction-column">
-                                <div class="first-screen-item__title">
-                                    <?php echo get_the_title($home_project4_id);?>
-                                </div>
-                                <div class="first-screen-item__subtitle">
-                                    <?php the_field('project_author', $home_project4_id);?>
-                                </div>
-                            </div>
-                            <div class="first-screen-item__cell">
-                                <div class="first-screen-item__text">Смотреть »</div>
-                            </div>
+<!-- ___________________________________clonen nonchanged code end  -->
                         </div>
-                    </div>
-                </div>
+                         <?php endforeach; ?>
+            </div>
 <!-- _________________________________________________________________________________add custom project connect END-->
                 <div class="first-screen__item first-screen-item first-screen-item--author"
                         <?php //custom home_photo2

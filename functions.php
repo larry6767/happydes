@@ -49,15 +49,15 @@ function happ_scripts() {
 		// font was connect in header.php,else if connects fonts here - when open in opera after 0,5 sec client seen, how changing fonts on header - seems like a shit
 		//wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic');
 
-	wp_enqueue_style('all.min.css', THEME_DIR . '/css/all.min.css');
+	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
 
-	wp_enqueue_script('lightbox.min', THEME_DIR . '/js/lightbox.min.js', array("jquery"), '', true);
+	wp_enqueue_script('lightbox.min', THEME_DIR . '/build/js/lightbox.min.js', array("jquery"), '', true);
 
-	wp_enqueue_script('slick.min', THEME_DIR . '/js/slick.min.js', array("jquery"), '', true);
+	wp_enqueue_script('slick.min', THEME_DIR . '/build/js/slick.min.js', array("jquery"), '', true);
 
-	wp_enqueue_script('jquery.maskedinput.min', THEME_DIR . '/js/jquery.maskedinput.min.js', array("jquery"), '', true);
+	wp_enqueue_script('jquery.maskedinput.min', THEME_DIR . '/build/js/jquery.maskedinput.min.js', array("jquery"), '', true);
 
-	wp_enqueue_script('all.script', THEME_DIR . '/js/all.js', array("jquery"), '', true);
+	wp_enqueue_script('all.script', THEME_DIR . '/build/js/all.js', array("jquery"), '', true);
 //___________________________
 
 	wp_enqueue_script( 'happ-navigation', THEME_DIR . '/js/navigation.js', array(), '20151215', true );

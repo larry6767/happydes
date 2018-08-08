@@ -84,33 +84,30 @@ get_header();
 
 					</div>
 	            </div>
-	            <div class="ui-button ui-button--gradient resume-text-block__button resume-text-block__button--more x-more-less" data-text="Читать дальше"></div>
+	            <div class="ui-custom-button ui-custom-button--gradient project-description__button project-description__button--more x-more-less" data-text="Читать дальше"></div>
 			</div>
 		</div>
 	</div>
     <div class="resume-certificates">
         <div class="ui-container resume-certificates__inner">
             <div class="resume-certificates__title">Дипломы и сертификаты</div>
-
+			<ul class="resume-certificates__list certificates-list x-resume-slider">
 
 			<?php //custom diplom slider
 
 				$images = get_field('about_diploms');
-
-				if( $images ): ?>
-	 			<ul class="resume-certificates__list certificates-list x-resume-slider">
+				if( $images ): ?>	 			
 			        <?php foreach( $images as $image ): ?>
 			            <li class="certificates-list__item">
                             <a href="<?php echo $image['url']; ?>" data-lightbox="certificates" class="ui-link ui-link--spy">
-    			                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+    			                <img src="<?php echo $image['sizes']['thumbnail']; ?>"/>
                             </a>
 			            </li>
 			        <?php endforeach; ?>
-				</ul>
-			<?php endif; ?>
+				<?php endif; ?>
+			</ul>
         </div>
     </div>
-
     <div class="resume-publications">
         <div class="ui-container resume-publications__inner">
             <div class="resume-publications__title">Публикации</div>
@@ -122,7 +119,7 @@ get_header();
 			        <?php foreach( $images as $image ): ?>
 			            <li class="publications-list__item">
 			                <a href="<?php echo $image['url']; ?>" data-lightbox="publications" class="ui-link ui-link--spy">
-    			                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+    			                <img src="<?php echo $image['sizes']['thumbnail']; ?>"/>
 			                </a>
 			            </li>
 			        <?php endforeach; ?>

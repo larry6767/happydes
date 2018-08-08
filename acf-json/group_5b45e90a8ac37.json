@@ -143,6 +143,31 @@
             "mime_types": ""
         },
         {
+            "key": "field_5b69b74c84678",
+            "label": "Слайдер проекта(галерея на главной странице)",
+            "name": "projeсt_slider_home",
+            "type": "gallery",
+            "instructions": "Это необязательное поле\r\n\r\nЭти фото будут показаны на главной странице сайта, в блоках для проектов. \r\nЛучше подойдут горизонтальные фото.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 20,
+            "insert": "append",
+            "library": "uploadedTo",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5b4f03f3680bc",
             "label": "Миниатюра проекта",
             "name": "projeсt_mini",
@@ -198,5 +223,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532959945
+    "modified": 1533655220
 }

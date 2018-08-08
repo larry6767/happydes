@@ -30,6 +30,7 @@ jQuery(document).ready(function ($) {
         setTimeout(function() {
             $this.slick({
                 infinite: true,
+                fade: true,
                 autoplay: true,
                 speed: 1000,
                 variableWidth: false,

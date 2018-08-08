@@ -3,6 +3,25 @@
     "title": "Домашняя страница",
     "fields": [
         {
+            "key": "field_5b4dfce910486",
+            "label": "Фото 1 имя",
+            "name": "home_photo1_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5b4dcba2999cf",
             "label": "Фото 1",
             "name": "home_photo1",
@@ -48,9 +67,9 @@
             "multiple": 0
         },
         {
-            "key": "field_5b4dfce910486",
-            "label": "Фото 1 имя",
-            "name": "home_photo1_name",
+            "key": "field_5b4dfd4210487",
+            "label": "Фото 2 имя",
+            "name": "home_photo2_name",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -110,25 +129,6 @@
             "allow_null": 0,
             "allow_archives": 0,
             "multiple": 0
-        },
-        {
-            "key": "field_5b4dfd4210487",
-            "label": "Фото 2 имя",
-            "name": "home_photo2_name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_5b4dcd07999d1",
@@ -264,5 +264,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531919452
+    "modified": 1533656317
 }
