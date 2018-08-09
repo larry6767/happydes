@@ -31,19 +31,11 @@ function happ_setup() {
 		//автоустановка тега title на страницы
 		add_theme_support( 'title-tag' );
 
-		//миниатюры статей
-		// add_theme_support( 'post-thumbnails' );
-
 		//регистрация меню
 		register_nav_menus( array(
 			'Primary' => esc_html__( 'Primary', 'happ' ),
 		) );
 
-		// //компоненты, которые поддерживает тема
-		// add_theme_support( 'html5', array(
-		// 	'gallery',
-		// 	'caption',
-		// ) );
 	}
 add_action( 'after_setup_theme', 'happ_setup' );
 
@@ -53,12 +45,8 @@ function happ_scripts() {
 	wp_enqueue_style( 'happ-style', get_stylesheet_uri() );
 
 // custom connect______________
-		// font was connect in header.php,else if connects fonts here - when open in opera after 0,5 sec client seen, how changing fonts on header - seems like a shit
-		//wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic');
 
 	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
-
-	// wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
 
 	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/build/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
