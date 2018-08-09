@@ -16,27 +16,34 @@ if( function_exists('acf_add_options_page') ) {
 
 
 
+//add portfotio id to post paren 
+// add_filter( 'wp_insert_post_data', 'set_parent_page_for_new_posts' );
+// function set_parent_page_for_new_posts( $data ) 
+// {
+//     if ($data['post_status'] == 'auto-draft' )
+//     $data['post_parent'] = 77;
+//     return $data;
+// }
+
+
 function happ_setup() {
 
 		//автоустановка тега title на страницы
 		add_theme_support( 'title-tag' );
 
 		//миниатюры статей
-		add_theme_support( 'post-thumbnails' );
+		// add_theme_support( 'post-thumbnails' );
 
 		//регистрация меню
 		register_nav_menus( array(
 			'Primary' => esc_html__( 'Primary', 'happ' ),
 		) );
 
-		//компоненты, которые поддерживает тема
-		add_theme_support( 'html5', array(
-			//'search-form',
-			//'comment-form',
-			//'comment-list',
-			'gallery',
-			'caption',
-		) );
+		// //компоненты, которые поддерживает тема
+		// add_theme_support( 'html5', array(
+		// 	'gallery',
+		// 	'caption',
+		// ) );
 	}
 add_action( 'after_setup_theme', 'happ_setup' );
 
@@ -51,9 +58,13 @@ function happ_scripts() {
 
 	wp_enqueue_style('all.min.css', THEME_DIR . '/build/css/all.min.css');
 
-	wp_enqueue_script('lightbox.min', THEME_DIR . '/build/js/lightbox.min.js', array("jquery"), '', true);
+	// wp_enqueue_script('ajax', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array("jquery"), '', true);
+
+	wp_enqueue_script('jquery.fn.uiModal', THEME_DIR . '/build/js/jquery.fn.uiModal.js', array("jquery"), '', true);
 
 	wp_enqueue_script('slick.min', THEME_DIR . '/build/js/slick.min.js', array("jquery"), '', true);
+
+	wp_enqueue_script('lightbox.min', THEME_DIR . '/build/js/lightbox.min.js', array("jquery"), '', true);
 
 	wp_enqueue_script('jquery.maskedinput.min', THEME_DIR . '/build/js/jquery.maskedinput.min.js', array("jquery"), '', true);
 
@@ -64,11 +75,6 @@ function happ_scripts() {
 
 	wp_enqueue_script( 'happ-skip-link-focus-fix', THEME_DIR . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-
-
-	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	// 	wp_enqueue_script( 'comment-reply' );
-	// }
 }
 add_action( 'wp_enqueue_scripts', 'happ_scripts' );
 
