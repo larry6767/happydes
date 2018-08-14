@@ -9,11 +9,13 @@ get_header();
             jQuery(document).ready(function($) {
                 $("#contact").submit(function() {
                     var str = $(this).serialize();
+                    $('#submitinput').attr('disabled', true).css('filter', 'grayscale(100%)');
                     $.ajax({
                         type: "POST",
                         url: "<?php echo THEME_DIR;?>/contact_form_mail.php",      // здесь указываем путь ко второму файлу
                         data: str,
                         success: function(msg) {
+                            $('#submitinput').attr('disabled', false).css('filter', 'none');
                             if(msg == 'OK') {
                                 result = '<div class="ok">Сообщение отправлено</div>';   // текст, если сообщение отправлено
                                 $("#fields").show();
@@ -70,12 +72,12 @@ get_header();
                     $images = get_field('projeсt_slider_home', $home_project1_id );
 
                          foreach( $images as $image ): ?>
-                            <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" 
+                            <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item"
                             style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
                             onclick="location.href=
                             '<?php //custom projeсt1_link
                             echo get_page_link($home_project1_id); ?> ' ">
-                            
+
 <!-- ___________________________________clonen nonchanged code start  -->
                             <div class="first-screen-item__inner">
 
@@ -109,7 +111,7 @@ get_header();
             </div>
 
         </div>
-        <div class="first-screen__column"> 
+        <div class="first-screen__column">
 <!-- _________________________________________________________________________________add custom project connect 2-->
                                 <?php //get project2 id
                     $home_project2_id = (get_field('home_project_2')); ?>
@@ -120,12 +122,12 @@ get_header();
                     $images = get_field('projeсt_slider_home', $home_project2_id );
 
                          foreach( $images as $image ): ?>
-                            <div class="first-screen__item first-screen-item x-front-page-slider-item" 
+                            <div class="first-screen__item first-screen-item x-front-page-slider-item"
                             style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
                             onclick="location.href=
                             '<?php //custom projeсt1_link
                             echo get_page_link($home_project2_id); ?> ' ">
-                            
+
 <!-- ___________________________________clonen nonchanged code start  -->
                             <div class="first-screen-item__inner">
 
@@ -167,12 +169,12 @@ get_header();
                     $images = get_field('projeсt_slider_home', $home_project3_id );
 
                          foreach( $images as $image ): ?>
-                            <div class="first-screen__item first-screen-item x-front-page-slider-item" 
+                            <div class="first-screen__item first-screen-item x-front-page-slider-item"
                             style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
                             onclick="location.href=
                             '<?php //custom projeсt1_link
                             echo get_page_link($home_project3_id); ?> ' ">
-                            
+
 <!-- ___________________________________clonen nonchanged code start  -->
                             <div class="first-screen-item__inner">
 
@@ -205,7 +207,7 @@ get_header();
                          <?php endforeach; ?>
                     </div>
         </div>
-            
+
 <!-- _________________________________________________________________________________add custom project connect 4-->
         <div class="first-screen__column">
 
@@ -218,12 +220,12 @@ get_header();
                     $images = get_field('projeсt_slider_home', $home_project4_id );
 
                          foreach( $images as $image ): ?>
-                            <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item" 
+                            <div class="first-screen__item first-screen-item first-screen-item--short x-front-page-slider-item"
                             style="background-image: url( <?php echo $image['sizes']['large']; ?> );"
                             onclick="location.href=
                             '<?php //custom projeсt1_link
                             echo get_page_link($home_project4_id); ?> ' ">
-                            
+
 <!-- ___________________________________clonen nonchanged code start  -->
                             <div class="first-screen-item__inner">
 
